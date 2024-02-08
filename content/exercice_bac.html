@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Épreuve écrite &#8212; 1 NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=72851d7f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=d99ca74e"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/exercice_bac';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Épreuve pratique" href="exercice_epreuve_pratique.html" />
+    <link rel="prev" title="TP sur les dictionnaires" href="tp_dictionnaire.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Haut de page
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">1 NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="activite.html">Activité sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cours.html">Le dictionnaire en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercice sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp_dictionnaire.html">TP sur les dictionnaires</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Épreuve écrite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice_epreuve_pratique.html">Épreuve pratique</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/exercice_bac.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Épreuve écrite</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="epreuve-ecrite">
+<h1>Épreuve écrite<a class="headerlink" href="#epreuve-ecrite" title="Link to this heading">#</a></h1>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<div class="reference docutils container">
+<p class="rubric">Informations</p>
+<ul class="simple">
+<li><p>Code de l’épreuve: <code class="xref download docutils literal notranslate"><span class="pre">22-NSIJ1G11</span></code></p></li>
+<li><p>Exercice : 1</p></li>
+<li><p>Thèmes : listes, p-uplet, dictionnaires</p></li>
+</ul>
+</div>
+<p>On dispose de la liste jours suivante et du dictionnaire mois suivant :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jours</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dimanche&quot;</span><span class="p">,</span> <span class="s2">&quot;lundi&quot;</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span><span class="p">]</span>
+
+<span class="n">mois</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span> <span class="p">:(</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">:(</span><span class="s2">&quot;février&quot;</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span> <span class="p">,</span> <span class="mi">3</span> <span class="p">:(</span><span class="s2">&quot;mars&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span> <span class="mi">4</span> <span class="p">:(</span><span class="s2">&quot;avril&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span>\
+      <span class="mi">5</span> <span class="p">:(</span><span class="s2">&quot;mai&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">6</span> <span class="p">:(</span><span class="s2">&quot;juin&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">7</span> <span class="p">:(</span><span class="s2">&quot;juillet&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">8</span> <span class="p">:(</span><span class="s2">&quot;aout&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> \
+      <span class="mi">9</span> <span class="p">:(</span><span class="s2">&quot;septembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">10</span> <span class="p">:(</span><span class="s2">&quot;octobre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">11</span> <span class="p">:(</span><span class="s2">&quot;novembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">12</span> <span class="p">:(</span><span class="s2">&quot;décembre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)}</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><ol class="loweralpha">
+<li><p>A partir de la liste jours, comment obtenir l’élément « lundi » ?</p></li>
+<li><p>On rappelle que l’opérateur % (« modulo ») renvoie le reste de la division entière (division euclidienne).</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p><span class="math notranslate nohighlight">\(7\%3\)</span> renvoie 1 qui est le reste de la division de 7 par 3.</p>
+<img alt="../_images/modulo.png" class="align-center" src="../_images/modulo.png" />
+</div>
+<p>Que renvoie l’instruction <code class="docutils literal notranslate"><span class="pre">jours[18%7]</span></code> ?</p>
+</li>
+</ol>
+</li>
+<li><p>On rappelle que <code class="docutils literal notranslate"><span class="pre">jours.index[element]</span></code> renvoie l’indice de <code class="docutils literal notranslate"><span class="pre">element</span></code> dans la liste jours.
+Par exemple <code class="docutils literal notranslate"><span class="pre">jours.index[&quot;mercredi&quot;]</span></code> renvoie 3.</p>
+<p>Le nom du jour actuel est stocké dans une variable j (par exemple : j = « mardi »). Recopier et compléter l’instruction suivante permettant d’obtenir le numéro du jour de la semaine n jours plus tard :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero_jour</span> <span class="o">=</span><span class="p">(</span><span class="n">jours</span><span class="o">.</span><span class="n">index</span><span class="p">[</span> <span class="err">…</span> <span class="p">]</span> <span class="o">+</span> <span class="err">…</span> <span class="p">)</span><span class="o">%</span> <span class="err">…</span>
+</pre></div>
+</div>
+</li>
+<li><ol class="loweralpha simple">
+<li><p>A partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?</p></li>
+<li><p>Le numéro du mois actuel est stocké dans une variable numero_mois, écrire le code permettant d’obtenir le nom du mois qu’il sera x mois plus tard à partir du dictionnaire mois. Par exemple :</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">4</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, on doit obtenir « septembre »</p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">10</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3</span></code>, on doit obtenir « janvier »</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>On définit une date comme un tuple : <code class="docutils literal notranslate"><span class="pre">(nom_jour,numero_jour,</span> <span class="pre">numero_mois,annee)</span></code>.</p>
+<ol class="loweralpha">
+<li><p>Sachant que <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">=</span> <span class="pre">(&quot;samedi&quot;,</span> <span class="pre">21,</span> <span class="pre">10,</span> <span class="pre">1995)</span></code>, que renvoie <code class="docutils literal notranslate"><span class="pre">mois[date[2]][1]</span></code> ?</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">jour_suivant(date)</span></code> qui prend en paramètre une date sous forme de tuple et qui renvoie un tuple désignant la date du lendemain. Par exemple :</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jour_suivant</span><span class="p">(</span> <span class="p">(</span><span class="s2">&quot;samedi&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span> <span class="p">)</span> <span class="n">renvoie</span> <span class="p">(</span><span class="s2">&quot;dimanche&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jour_suivant</span><span class="p">(</span> <span class="p">(</span><span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span> <span class="p">)</span> <span class="n">renvoie</span> <span class="p">(</span><span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On ne tient pas compte des années bissextiles et on considère que le mois de février comporte toujours 28 jours.</p>
+</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<div class="reference docutils container">
+<p class="rubric">Informations</p>
+<ul class="simple">
+<li><p>Code de l’épreuve: <code class="xref download docutils literal notranslate"><span class="pre">22-NSIJ1G11</span></code></p></li>
+<li><p>Exercice : 3</p></li>
+<li><p>Thèmes : systèmes d’exploitation, dictionnaires</p></li>
+</ul>
+</div>
+<p>Afin d’organiser les dossiers et les fichiers sur un disque dur, une structure arborescente est utilisée. Les fichiers sont dans des dossiers qui sont eux-mêmes dans d’autres dossiers, etc.</p>
+<p>Dans une arborescence, chaque dossier peut contenir des fichiers et des dossiers, qui sont identifiés par leur nom. Le contenu d’un dossier est modélisé par la structure de données dictionnaire. Les clés de ce dictionnaire sont des chaînes de caractères donnant le nom des fichiers et des dossiers contenus.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Le dossier appelé Téléchargements contient deux fichiers <code class="docutils literal notranslate"><span class="pre">rapport.pdf</span></code> et <code class="docutils literal notranslate"><span class="pre">jingle.mp3</span></code>, et un dossier Images contenant simplement le fichier <code class="docutils literal notranslate"><span class="pre">logo.png</span></code>. Il est représenté ci-dessous.</p>
+<figure class="align-center">
+<img alt="../_images/exercice_arborescence.png" src="../_images/exercice_arborescence.png" />
+</figure>
+<p>Ce dossier Téléchargements est modélisé en Python par le dictionnaire suivant :</p>
+<p><code class="docutils literal notranslate"><span class="pre">{&quot;Images&quot;:</span> <span class="pre">{&quot;logo.png&quot;:</span> <span class="pre">36},</span> <span class="pre">&quot;rapport.pdf&quot;:</span> <span class="pre">450,</span> <span class="pre">&quot;jingle.mp3&quot;:</span> <span class="pre">4800}</span></code></p>
+<p>Les valeurs numériques sont exprimées en ko (kilo-octets).
+<code class="docutils literal notranslate"><span class="pre">&quot;logo.png&quot;:</span> <span class="pre">36</span></code> signifie que le fichier logo.png occupe un espace mémoire de 36ko sur le disque dur.</p>
+</div>
+<p>On rappelle, ci-dessous, quelques commandes sur l’utilisation d’un dictionnaire :</p>
+<ul class="simple">
+<li><p>dico = {} crée un dictionnaire vide appelé dico,</p></li>
+<li><p>dico[cle] = contenu met la valeur contenu pour la clé cle dans le dictionnaire dico,</p></li>
+<li><p>dico[cle] renvoie la valeur associée à la clé cle dans le dictionnaire dico,</p></li>
+<li><p>cle in dico renvoie un booléen indiquant si la clé cle est présente dans le dictionnaire dico,</p></li>
+<li><p>del dico[cle] supprime la clé cle et sa valeur associée du dico.</p></li>
+<li><p>dico.keys() renvoie la liste des clés du dictionnaire dico</p></li>
+<li></li>
+</ul>
+<p>L’adresse d’un fichier ou d’un dossier correspond au nom de tous les dossiers à parcourir depuis la racine afin d’accéder au fichier ou au dossier. Cette adresse est modélisée en Python par la liste des noms de dossier à parcourir pour y accéder.</p>
+<p>Exemple : L’adresse du dossier : <code class="docutils literal notranslate"><span class="pre">/home/pierre/Documents/</span></code> est modélisée par la liste <code class="docutils literal notranslate"><span class="pre">[&quot;home&quot;,</span> <span class="pre">&quot;pierre&quot;,</span> <span class="pre">&quot;Documents&quot;]</span></code>.</p>
+<ol class="arabic">
+<li><p>Dessiner l’arbre donné par le dictionnaire suivant, qui correspond au dossier <code class="docutils literal notranslate"><span class="pre">Documents</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Documents</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;Administratif&quot;</span><span class="p">:{</span>
+   <span class="s2">&quot;certificat JDC.pdf &quot;</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span>
+   <span class="s2">&quot;attestation recensement.pdf &quot;</span><span class="p">:</span> <span class="mi">850</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;Cours&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;NSI&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">&quot;TP.html &quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+         <span class="s2">&quot;dm.odt&quot;</span><span class="p">:</span> <span class="mi">345</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;Philo&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">&quot;Tractatus logico-philosophicus.epub&quot;</span><span class="p">:</span> <span class="mi">2600</span>
+      <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;liste de courses.txt &quot;</span><span class="p">:</span> <span class="mi">24</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><ol class="loweralpha">
+<li><p>On donne la fonction Parcourir suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.</p>
+<p>Exemple : Si la variable <code class="docutils literal notranslate"><span class="pre">Documents</span></code> contient le dictionnaire de l’exemple de la question 1 alors <code class="docutils literal notranslate"><span class="pre">Parcourir(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;Philo&quot;])</span></code> renvoie le dictionnaire <code class="docutils literal notranslate"><span class="pre">{&quot;Tractatus</span> <span class="pre">logicophilosophicus.epub&quot;:</span> <span class="pre">2600}</span></code>.</p>
+<p>Recopier et compléter la ligne 4:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">):</span>
+    <span class="n">dossier</span> <span class="o">=</span> <span class="n">racine</span>
+    <span class="k">for</span> <span class="n">nom_dossier</span> <span class="ow">in</span> <span class="n">adr</span><span class="p">:</span>
+        <span class="n">dossier</span> <span class="o">=</span> <span class="c1"># A compléter</span>
+    <span class="k">return</span> <span class="n">dossier</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soit la fonction suivante :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Afficher</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">):</span>
+    <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Qu’affiche l’instruction <code class="docutils literal notranslate"><span class="pre">Afficher(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;NSI&quot;],&quot;TP.html&quot;)</span></code> sachant que la variable Documents contient le dictionnaire de la question 1 ?</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><ol class="loweralpha">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">Ajouter(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_fichier,</span> <span class="pre">taille)</span></code> suivante ajoute au dictionnaire <code class="docutils literal notranslate"><span class="pre">racine</span></code>, à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>, la clé nom_fichier associé à la valeur taille.</p>
+<p>Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ajouter_fichier</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
+   <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
+   <span class="n">taille</span> <span class="o">=</span> <span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">Ajouter_dossier(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_dossier)</span></code> pour créer un dictionnaire représentant un dossier vide appelé <code class="docutils literal notranslate"><span class="pre">nom_dossier</span></code> dans le dictionnaire racine à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>.</p></li>
+</ol>
+</li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">taille(dossier)</span></code> qui prend en paramètre un dictionnaire <code class="docutils literal notranslate"><span class="pre">dossier</span></code> modélisant le contenu du répertoire dossier et qui renvoie le total de l’espace mémoire occupé par les fichiers contenus dans le dossier. On considère que le répertoire dossier ne contient que des fichiers et aucun sous-dossier.</p></li>
+</ol>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
+<div class="reference docutils container">
+<p class="rubric">Informations</p>
+<ul class="simple">
+<li><p>Code de l’épreuve: <code class="xref download docutils literal notranslate"><span class="pre">21-NSIJ2ME3</span></code></p></li>
+<li><p>Exercice : 2</p></li>
+<li><p>Thèmes : tableaux, dictionnaires</p></li>
+</ul>
+</div>
+<p>Les Aventuriers du Rail© est un jeu de société dans lequel les joueurs doivent construire des lignes de chemin de fer entre différentes villes d’un pays.</p>
+<p>La carte des liaisons possibles dans la région Occitanie est donnée ci-dessous:</p>
+<figure class="align-center">
+<img alt="../_images/exercice_reseau_train_1.png" src="../_images/exercice_reseau_train_1.png" />
+</figure>
+<p>Sur la seconde figure, les liaisons possédées par le joueur 1 sont en noir, et celles du joueur 2 en blanc. Les liaisons en gris sont encore en jeu.</p>
+<figure class="align-center">
+<img alt="../_images/exercice_reseau_train_2.png" src="../_images/exercice_reseau_train_2.png" />
+</figure>
+<p>Codages des structures de données utilisées :</p>
+<ul>
+<li><p>Liste des liaisons d’un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type « tableau de tableaux ».</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Seules les liaisons directes existent, par exemple [« Toulouse », »Muret »] ou [« Muret », »Toulouse »]. Par contre, le tableau [« Toulouse », »Mazamet »] n’existe pas, puisque la ligne Toulouse-Mazamet passe par Castres.</p>
+</div>
+<p>Le joueur 1 possède les lignes directes « Toulouse-Muret », « Toulouse-Montauban », « Gaillac-St Sulpice » et « Muret-Pamiers » (liaisons indiquées en noir sur la figure ci-dessus). Ces liaisons sont mémorisées dans la variable ci-après.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">liaisonsJoueur1</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Muret&quot;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">,</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Dictionnaire associé à un joueur : On code la liste des villes et des trajets possédée par un joueur en utilisant un dictionnaire de tableaux. Chaque clef de ce dictionnaire est une ville de départ, et chaque valeur est un tableau contenant les villes d’arrivée possibles en fonction des liaisons possédées par le joueur.</p>
+<p>Le dictionnaire de tableaux du joueur 1 est donné ci-après :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DictJoueur1</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;Toulouse&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;Montauban&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;Gaillac&quot;</span><span class="p">:[</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;St Sulpice&quot;</span><span class="p">:[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;Muret&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">],</span>
+   <span class="s2">&quot;Pamiers&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>Expliquer pourquoi la liste des liaisons suivante n’est pas valide :
+<code class="docutils literal notranslate"><span class="pre">tableauliaisons</span> <span class="pre">=</span> <span class="pre">[[&quot;Toulouse&quot;,&quot;Auch&quot;],</span> <span class="pre">[&quot;Luchon&quot;,&quot;Muret&quot;],[&quot;Quillan&quot;,&quot;Limoux&quot;]</span> <span class="pre">]</span></code></p></li>
+<li><p>Cette question concerne le joueur n°2 (Rappel : les liaisons possédées par le joueur n°2 sont représentées par un rectangle blanc).</p>
+<ol class="loweralpha simple">
+<li><p>Donner le tableau liaisonsJoueur2, des liaisons possédées par le joueur n°2.</p></li>
+<li><p>Recopier et compléter le dictionnaire suivant, associé au joueur n°2 : <code class="docutils literal notranslate"><span class="pre">DictJoueur2</span> <span class="pre">=</span> <span class="pre">{&quot;Toulouse&quot;:[&quot;Castres&quot;,&quot;Castelnaudary&quot;],…}</span></code>.</p></li>
+</ol>
+</li>
+<li><p>À partir du tableau de tableaux contenant les liaisons d’un joueur, on souhaite construire le dictionnaire correspondant au joueur. Une première proposition a abouti à la fonction construireDict ci-dessous.</p>
+<ol class="loweralpha simple">
+<li><p>Écrire sur votre copie un assert dans la fonction construireDict qui permet de vérifier que la listeLiaisons n’est pas vide.</p></li>
+<li><p>Sur votre copie, donner le résultat de cette fonction ayant comme argument la variable liaisonsJoueur1 donnée dans l’énoncé et expliquer en quoi cette fonction ne répond que partiellement à la demande.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">construireDict</span></code>, définie ci-dessus, est donc partiellement inexacte. Compléter la fonction construireDict pour qu’elle génère bien l’ensemble du dictionnaire de tableaux correspondant à la liste de liaisons données en argument. À l’aide des numéros de lignes, on précisera où est inséré ce code.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h2>
+<div class="reference docutils container">
+<p class="rubric">Informations</p>
+<ul class="simple">
+<li><p>Code de l’épreuve: <code class="xref download docutils literal notranslate"><span class="pre">22-NSIJ2G11</span></code></p></li>
+<li><p>Exercice : 2</p></li>
+<li><p>Thèmes : structures de données, dictionnaires</p></li>
+</ul>
+</div>
+<p>La cryptographie est un ensemble de techniques permettant de chiffrer un message. Une technique de cryptographie consiste à mélanger les lettres d’un alphabet et à réécrire le message avec ces permutations. En Python, on peut créer un dictionnaire dans lequel les clés sont les lettres de l’alphabet et les valeurs sont celles de l’alphabet mélangé.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Si l’alphabet contient les 4 lettres A, B, C et D, et si le dictionnaire de l’alphabet mélangé est <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:</span> <span class="pre">&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:</span> <span class="pre">&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:</span> <span class="pre">&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:</span> <span class="pre">&quot;C&quot;}</span></code>, la chaîne de caractères <code class="docutils literal notranslate"><span class="pre">&quot;BAC&quot;</span></code> sera chiffrée <code class="docutils literal notranslate"><span class="pre">&quot;DBA&quot;</span></code>.</p>
+</div>
+<p>Un tel dictionnaire sera appelé <strong>dictionnaire de chiffrement</strong>.</p>
+<ol class="arabic">
+<li><p>On souhaite chiffrer un message écrit avec l’alphabet A, B, C, D, E, F, G à l’aide du dictionnaire <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code>.</p>
+<ol class="loweralpha simple">
+<li><p>Quelle est la valeur associée à la clé <code class="docutils literal notranslate"><span class="pre">&quot;D&quot;</span></code> ? En Python, comment l’obtenir ?</p></li>
+<li><p>Chiffrer la chaîne de caractères <code class="docutils literal notranslate"><span class="pre">&quot;BAGAGE&quot;</span></code> avec le dictionnaire <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p></li>
+</ol>
+</li>
+<li><p>On considère qu’un mot est une chaîne de caractères (un objet de type str) écrite uniquement avec les 26 lettres de l’alphabet en majuscule. Par exemple, <code class="docutils literal notranslate"><span class="pre">&quot;ARBRE&quot;</span></code> est un mot et <code class="docutils literal notranslate"><span class="pre">&quot;L’ARBRE</span> <span class="pre">!&quot;</span></code> n’est pas un mot à cause des caractères : « ’ », «  « (espace) et « ! ».</p>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">chiffrer(mot,</span> <span class="pre">alpha)</span></code> qui prend en paramètres <code class="docutils literal notranslate"><span class="pre">mot</span></code> un mot et <code class="docutils literal notranslate"><span class="pre">alpha</span></code> un dictionnaire de chiffrement, et qui renvoie une chaîne de caractères chiffrée avec le dictionnaire de chiffrement <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
+</li>
+<li><p>On souhaite déchiffrer un mot chiffré avec cette méthode.</p>
+<ol class="loweralpha simple">
+<li><p>Si un mot est chiffré avec le dictionnaire de chiffrement <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code>, donner un dictionnaire permettant de le déchiffrer.</p></li>
+<li><p>Ecrire une fonction en Python appelée <code class="docutils literal notranslate"><span class="pre">dico_dechiffrement(dico)</span></code> qui prend en paramètre dico un dictionnaire de chiffrement et qui renvoie un dictionnaire permettant le déchiffrement. On pourra s’inspirer du code incomplet ci-dessous ou proposer une autre solution :</p></li>
+</ol>
+<ol class="loweralpha simple" start="3">
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">dechiffre(mot,</span> <span class="pre">dico)</span></code> qui reçoit un mot chiffré et un dictionnaire de chiffrement et renvoie le mot décodé. On utilisera les fonctions écrites dans les questions précédentes.</p></li>
+</ol>
+</li>
+<li><p>On souhaite à présent créer un dictionnaire de chiffrement. Écrire une fonction <code class="docutils literal notranslate"><span class="pre">dico_chiffrement(alphabet)</span></code> qui prend en paramètre alphabet un tableau de lettres et qui renvoie un dictionnaire de chiffrement dont les clés sont les lettres du tableau alphabet et les valeurs sont les lettres du tableau alphabet mélangées.</p>
+<p>On pourra utiliser la fonction <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> qui mélange en place un tableau.</p>
+<p>Par exemple, on a :</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shuffle</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tab</span>
+<span class="go">[&quot;B&quot;, &quot;A&quot;, &quot;D&quot;, &quot;C&quot;]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tp_dictionnaire.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">TP sur les dictionnaires</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercice_epreuve_pratique.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Épreuve pratique</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

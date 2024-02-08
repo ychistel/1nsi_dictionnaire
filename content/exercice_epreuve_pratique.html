@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Épreuve pratique &#8212; 1 NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=72851d7f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=d99ca74e"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/exercice_epreuve_pratique';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Épreuve écrite" href="exercice_bac.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Haut de page
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">1 NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="activite.html">Activité sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cours.html">Le dictionnaire en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercice sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp_dictionnaire.html">TP sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice_bac.html">Épreuve écrite</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Épreuve pratique</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/exercice_epreuve_pratique.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Épreuve pratique</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="epreuve-pratique">
+<h1>Épreuve pratique<a class="headerlink" href="#epreuve-pratique" title="Link to this heading">#</a></h1>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<p>Les résultats d’un vote ayant trois issues possibles 'A', 'B' et 'C' sont stockés dans un tableau.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Urne = [ 'A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B' ]</p>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">depouille</span></code> doit permettre de compter le nombre de votes exprimés pour chacune des issues. Elle prend en paramètre un tableau et renvoie le résultat dans un dictionnaire dont les clés sont les noms des issues et les valeurs le nombre de votes en leur faveur.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">vainqueur</span></code> doit désigner le nom du ou des gagnants. Elle prend en paramètre un dictionnaire dont la structure est celle du dictionnaire renvoyé par la fonction depouille et renvoie un tableau. Ce tableau peut donc contenir plusieurs éléments s’il y a des ex-aequo.</p>
+<p>Compléter les fonctions <code class="docutils literal notranslate"><span class="pre">depouille</span></code> et <code class="docutils literal notranslate"><span class="pre">vainqueur</span></code> fournies ci-après pour qu’elles renvoient les résultats attendus.</p>
+<div class="admonition-exemples-dutilisation admonition">
+<p class="admonition-title">Exemples d’utilisation</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">election</span> <span class="o">=</span> <span class="n">depouille</span><span class="p">(</span><span class="n">urne</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">election</span>
+<span class="go">{&#39;B&#39;: 4, &#39;A&#39;: 3, &#39;C&#39;: 3}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vainqueur</span><span class="p">(</span><span class="n">election</span><span class="p">)</span>
+<span class="go">[&#39;B&#39;]</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<p>Sur le réseau social TipTop, on s’intéresse au nombre de « like » des abonnés. Les données sont stockées dans des dictionnaires où les clés sont les pseudos et les valeurs correspondantes sont les nombres de « like » comme ci-après : <code class="docutils literal notranslate"><span class="pre">{'Bob':</span> <span class="pre">102,</span> <span class="pre">'Ada':</span> <span class="pre">201,</span> <span class="pre">'Alice':</span> <span class="pre">103,</span> <span class="pre">'Tim':</span> <span class="pre">50}</span></code></p>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">max_dico</span></code> qui :</p>
+<ul class="simple">
+<li><p>prend en paramètre un dictionnaire dico non vide dont les clés sont des chaînes de caractères et les valeurs associées sont des entiers positifs ou nuls ;</p></li>
+<li><p>renvoie un tuple dont :</p>
+<ul>
+<li><p>la première valeur est une clé du dictionnaire associée à la valeur maximale ;</p></li>
+<li><p>la seconde valeur est la valeur maximale présente dans le dictionnaire.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">max_dico</span><span class="p">({</span><span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="mi">102</span><span class="p">,</span> <span class="s1">&#39;Ada&#39;</span><span class="p">:</span> <span class="mi">201</span><span class="p">,</span> <span class="s1">&#39;Alice&#39;</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span> <span class="s1">&#39;Tim&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
+<span class="go">(&#39;Ada&#39;, 201)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">max_dico</span><span class="p">({</span><span class="s1">&#39;Alan&#39;</span><span class="p">:</span> <span class="mi">222</span><span class="p">,</span> <span class="s1">&#39;Ada&#39;</span><span class="p">:</span> <span class="mi">201</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">:</span> <span class="mi">220</span><span class="p">,</span> <span class="s1">&#39;Tim&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
+<span class="go">(&#39;Alan&#39;, 222)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
+<p>Un professeur de NSI décide de gérer les résultats de sa classe sous la forme d’un dictionnaire :</p>
+<ul class="simple">
+<li><p>les clefs sont les noms des élèves ;</p></li>
+<li><p>les valeurs sont des dictionnaires dont les clefs sont les types d’épreuves sous forme de chaîne de caractères et les valeurs sont les notes obtenues associées à leurs coefficients dans une liste.</p></li>
+</ul>
+<p>Avec :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resultats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Dupont&#39;</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s1">&#39;DS1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">15.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+               <span class="s1">&#39;DM1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+               <span class="s1">&#39;DS2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+               <span class="s1">&#39;PROJET1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+               <span class="s1">&#39;DS3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="p">},</span>
+               <span class="s1">&#39;Durand&#39;</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s1">&#39;DS1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">6</span> <span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+               <span class="s1">&#39;DM1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+               <span class="s1">&#39;DS2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+               <span class="s1">&#39;PROJET1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+               <span class="s1">&#39;IE1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+               <span class="s1">&#39;DS3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+               <span class="s1">&#39;DS4&#39;</span><span class="p">:[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>L’élève dont le nom est Durand a ainsi obtenu au DS2 la note de 8 avec un coefficient 4.</p>
+<p>Le professeur crée une fonction moyenne qui prend en paramètre le nom d’un de ses élèves et renvoie sa moyenne arrondie au dixième.</p>
+<p>Compléter le code du professeur ci-dessous :</p>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h2>
+<p>Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre d’apparitions de ce caractère dans la chaîne.</p>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>le nombre d’occurrences du caractère 'o' dans 'bonjour' est 2 ;</p></li>
+<li><p>le nombre d’occurrences du caractère 'b' dans 'Bébé' est 1 ;</p></li>
+<li><p>le nombre d’occurrences du caractère 'B' dans 'Bébé' est 1 ;</p></li>
+<li><p>le nombre d’occurrences du caractère ' ' dans 'Hello world !' est 2.</p></li>
+</ul>
+</div>
+<p>On cherche le nombre d’occurrences des caractères dans une chaîne de caractères. On souhaite stocker ces nombres d’occurrences dans un dictionnaire dont les clefs seraient les caractères de la chaîne et les valeurs le nombre d’occurrences de ces caractères.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Avec la phrase “Hello world !” le dictionnaire est le suivant :</p>
+<p><code class="docutils literal notranslate"><span class="pre">{'H':</span> <span class="pre">1,</span> <span class="pre">'e':</span> <span class="pre">1,</span> <span class="pre">'l':</span> <span class="pre">3,</span> <span class="pre">'o':</span> <span class="pre">2,</span> <span class="pre">'</span> <span class="pre">':</span> <span class="pre">2,</span> <span class="pre">'w':</span> <span class="pre">1,'r':</span> <span class="pre">1,</span> <span class="pre">'d':</span> <span class="pre">1,</span> <span class="pre">'!':</span> <span class="pre">1}</span></code></p>
+<p>L’ordre des clefs n’a pas d’importance.</p>
+</div>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">nbr_occurrences</span></code> prenant comme paramètre une chaîne de caractères <code class="docutils literal notranslate"><span class="pre">chaine</span></code> et renvoyant le dictionnaire des nombres d’occurrences des caractères de cette chaîne.</p>
+</section>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Link to this heading">#</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">enumere</span></code> qui prend en paramètre une liste <code class="docutils literal notranslate"><span class="pre">L</span></code> et renvoie un dictionnaire <code class="docutils literal notranslate"><span class="pre">d</span></code> dont les clés sont les éléments de <code class="docutils literal notranslate"><span class="pre">L</span></code> avec pour valeur associée la liste des indices de l’élément dans la liste <code class="docutils literal notranslate"><span class="pre">L</span></code>.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">enumere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">{1: [0, 1, 5], 2: [2, 4], 3: [3]}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Link to this heading">#</a></h2>
+<p>On considère au plus 26 personnes A, B, C, D, E, F … qui peuvent s’envoyer des messages avec deux règles à respecter :</p>
+<ul class="simple">
+<li><p>chaque personne ne peut envoyer des messages qu’à une seule personne (éventuellement elle-même),</p></li>
+<li><p>chaque personne ne peut recevoir des messages qu’en provenance d’une seule personne (éventuellement elle-même).</p></li>
+</ul>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Avec 6 personnes - de « plan d’envoi des messages » qui respecte les règles ci-dessus, puisque chaque personne est présente une seule fois dans chaque colonne :</p>
+<ul class="simple">
+<li><p>A envoie ses messages à E</p></li>
+<li><p>E envoie ses messages à B</p></li>
+<li><p>B envoie ses messages à F</p></li>
+<li><p>F envoie ses messages à A</p></li>
+<li><p>C envoie ses messages à D</p></li>
+<li><p>D envoie ses messages à C</p></li>
+</ul>
+<p>Le dictionnaire correspondant à au plan d’envoi ci-dessus est le suivant :</p>
+<p><code class="docutils literal notranslate"><span class="pre">plan_a</span> <span class="pre">=</span> <span class="pre">{'A':'E',</span> <span class="pre">'B':'F',</span> <span class="pre">'C':'D',</span> <span class="pre">'D':'C',</span> <span class="pre">'E':'B',</span> <span class="pre">'F':'A'}</span></code></p>
+</div>
+<p>Un cycle est une suite de personnes dans laquelle la dernière est la même que la première.
+Sur le plan d’envoi <code class="docutils literal notranslate"><span class="pre">plan_a</span></code> des messages ci-dessus, il y a deux cycles distincts : un
+premier cycle avec A, E, B, F et un second cycle avec C et D.</p>
+<p>En revanche, le plan d’envoi <code class="docutils literal notranslate"><span class="pre">plan_b</span> <span class="pre">=</span> <span class="pre">{'A':'C',</span> <span class="pre">'B':'F',</span> <span class="pre">'C':'E',</span> <span class="pre">'D':'A',</span> <span class="pre">'E':'B',</span> <span class="pre">'F':'D'}</span></code> comporte un unique cycle : A, C, E, B, F, D. Dans ce cas, lorsqu’un plan d’envoi comporte un unique cycle, on dit que le plan d’envoi est cyclique.</p>
+<p>Pour savoir si un plan d’envoi de messages comportant N personnes est cyclique, on peut utiliser l’algorithme ci-dessous :</p>
+<ul class="simple">
+<li><p>on part d’un expéditeur (ici A) et on inspecte son destinataire dans le plan d’envoi,</p></li>
+<li><p>chaque destinataire devient à son tour expéditeur, selon le plan d’envoi, tant qu’on ne « retombe » pas sur l’expéditeur initial,</p></li>
+<li><p>le plan d’envoi est cyclique si on l’a parcouru en entier.</p></li>
+</ul>
+<p>Compléter la fonction <code class="docutils literal notranslate"><span class="pre">est_cyclique</span></code> suivante en respectant la spécification.</p>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>la fonction Python <code class="docutils literal notranslate"><span class="pre">len</span></code> permet d’obtenir la longueur d’un dictionnaire.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="exercice_bac.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Épreuve écrite</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

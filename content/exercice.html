@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercice sur les dictionnaires &#8212; 1 NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=72851d7f" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=d99ca74e"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/exercice';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="TP sur les dictionnaires" href="tp_dictionnaire.html" />
+    <link rel="prev" title="Le dictionnaire en Python" href="cours.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Haut de page
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">1 NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="activite.html">Activité sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cours.html">Le dictionnaire en Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercice sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp_dictionnaire.html">TP sur les dictionnaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice_bac.html">Épreuve écrite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice_epreuve_pratique.html">Épreuve pratique</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/exercice.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercice sur les dictionnaires</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exercice-sur-les-dictionnaires">
+<h1>Exercice sur les dictionnaires<a class="headerlink" href="#exercice-sur-les-dictionnaires" title="Link to this heading">#</a></h1>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h2>
+<p>On donne le dictionnaire suivant:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animaux</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;chien&#39;</span><span class="p">:</span><span class="s1">&#39;rouky&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;chat&#39;</span><span class="p">:</span><span class="s1">&#39;berlioz&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;éléphant&#39;</span><span class="p">:</span><span class="s1">&#39;dumbo&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;ours&#39;</span><span class="p">:</span><span class="s1">&#39;baloo&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;panthère&#39;</span><span class="p">:</span> <span class="s1">&#39;bagheera&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;serpent&#39;</span><span class="p">:</span><span class="s1">&#39;kaa&#39;</span><span class="p">,</span>\
+    <span class="s1">&#39;renard&#39;</span><span class="p">:</span><span class="s1">&#39;rox&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Est-il possible d’ajouter la clé <code class="docutils literal notranslate"><span class="pre">tigre</span></code> avec la valeur <code class="docutils literal notranslate"><span class="pre">shere</span> <span class="pre">khan</span></code> au dictionnaire? Justifier.</p></li>
+<li><p>Est-il possible d’ajouter la clé <code class="docutils literal notranslate"><span class="pre">chien</span></code> avec la valeur <code class="docutils literal notranslate"><span class="pre">pongo</span></code> au dictionnaire? Justifier.</p></li>
+<li><p>Comment récupérer la valeur <code class="docutils literal notranslate"><span class="pre">berlioz</span></code> de ce dictionnaire ?</p></li>
+<li><p>Comment récupérer la valeur de la clé <code class="docutils literal notranslate"><span class="pre">panthère</span></code> du dictionnaire?</p></li>
+<li><p>Comment ajouter la souris nommée bernard au dictionnaire ?</p></li>
+<li><p>Comment ajouter aussi la souris nommée Bianca au dictionnaire ?</p></li>
+<li><p>Comment remplacer la clé <code class="docutils literal notranslate"><span class="pre">serpent</span></code> par la clé <code class="docutils literal notranslate"><span class="pre">snake</span></code> en gardant la valeur <code class="docutils literal notranslate"><span class="pre">kaa</span></code>?</p></li>
+<li><p>Comment récupérer dans une liste python toutes les clés du dictionnaire ?</p></li>
+<li><p>Comment récupérer dans une liste python toutes les valeurs du dictionnaire ?</p></li>
+<li><p>Comment connaitre le nombre d’éléments de ce dictionnaire ?</p></li>
+</ol>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Link to this heading">#</a></h2>
+<p>On considère le dictionnaire suivant:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loisir</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;jeu&#39;</span><span class="p">:</span><span class="s1">&#39;minecraft&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span><span class="p">:</span><span class="s1">&#39;basket-ball&#39;</span><span class="p">,</span> <span class="s1">&#39;instrument&#39;</span><span class="p">:</span><span class="s1">&#39;guitare&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>On donne le code Python suivant:</p>
+<ol class="loweralpha simple">
+<li><p>On réalise l’appel <code class="docutils literal notranslate"><span class="pre">mystere_1(loisir,'guitare')</span></code>. Quelle est la valeur renvoyée par cet appel de la fonction <code class="docutils literal notranslate"><span class="pre">mystere_1</span></code> ?</p></li>
+<li><p>On réalise l’appel <code class="docutils literal notranslate"><span class="pre">mystere_1(loisir,'football')</span></code>. Quelle est la valeur renvoyée par cet appel de la fonction <code class="docutils literal notranslate"><span class="pre">mystere_1</span></code> ?</p></li>
+</ol>
+</li>
+<li><p>On donne le code Python de la fonction <code class="docutils literal notranslate"><span class="pre">mystere_2</span></code>.</p>
+<ol class="loweralpha simple">
+<li><p>Que renvoie l’appel <code class="docutils literal notranslate"><span class="pre">mystere_2(loisir,'sport','football')</span></code> ? Justifier.</p></li>
+<li><p>Que renvoie l’appel <code class="docutils literal notranslate"><span class="pre">mystere_2(loisir,'lecture','Billy</span> <span class="pre">Summers')</span></code> ? Justifier.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h2>
+<p>On considère le dictionnaire <code class="docutils literal notranslate"><span class="pre">notes</span></code> suivant: <code class="docutils literal notranslate"><span class="pre">{'maths':12,'francais':11,'nsi':14,'anglais':13,'eps':10}</span></code></p>
+<p>On précise que pour ce dictionnaire:</p>
+<ul class="simple">
+<li><p>Les clés sont des matières sous forme de chaines de caractères (maths, français,…);</p></li>
+<li><p>Les valeurs sont des moyennes de type entier ou float.</p></li>
+</ul>
+<ol class="arabic">
+<li><p>En utilisant uniquement des instructions Python sur le dictionnaire <code class="docutils literal notranslate"><span class="pre">notes</span></code>:</p>
+<ol class="loweralpha simple">
+<li><p>Ajouter la matière espagnol et la note <span class="math notranslate nohighlight">\(17\)</span>.</p></li>
+<li><p>Modifier la note de nsi avec la valeur <span class="math notranslate nohighlight">\(15\)</span>.</p></li>
+</ol>
+</li>
+<li><p>On veut calculer la moyenne des notes d’un dictionnaire.
+Écrire une fonction <code class="docutils literal notranslate"><span class="pre">moyenne</span></code> qui a pour paramètre un dictionnaire <code class="docutils literal notranslate"><span class="pre">dico</span></code> et qui calcule la moyenne des notes du dictionnaire.</p>
+<p>Par exemple, <code class="docutils literal notranslate"><span class="pre">moyenne(notes)</span></code> renvoie la valeur 13 (après modifications).</p>
+</li>
+<li><p>On veut connaitre la note la plus faible du dictionnaire <code class="docutils literal notranslate"><span class="pre">notes</span></code>.
+Écrire la fonction <code class="docutils literal notranslate"><span class="pre">valeur_mini</span></code> qui prend en argument un dictionnaire <code class="docutils literal notranslate"><span class="pre">dico</span></code> et renvoie la valeur minimale du dictionnaire passé en argument. On admet que les valeurs sont comprises entre 0 et 20 (inclus).</p></li>
+<li><p>On souhaite maintenant connaitre la matière qui a la note la plus faible dans le dictionnaire.
+Écrire la fonction <code class="docutils literal notranslate"><span class="pre">matiere_faible</span></code> qui prend en paramètre un dictionnaire et qui renvoie la matière qui a la note la plus faible. On peut utiliser la fonction précédente <code class="docutils literal notranslate"><span class="pre">valeur_mini</span></code>.</p></li>
+</ol>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h2>
+<p>Un restaurant utilise un dictionnaire défini par les clés <code class="docutils literal notranslate"><span class="pre">entrée</span></code>, <code class="docutils literal notranslate"><span class="pre">plat</span></code>, <code class="docutils literal notranslate"><span class="pre">dessert</span></code> et <code class="docutils literal notranslate"><span class="pre">prix</span></code> permettant de stocker les informations sur les menus qu’il propose à chacun de ses clients.</p>
+<p>Ce restaurant propose 3 menus A, B et C :</p>
+<p class="rubric">menu A</p>
+<ul class="simple">
+<li><p>Entrée : avocat crevettes</p></li>
+<li><p>Plat : lasagnes de légumes</p></li>
+<li><p>Dessert : tarte aux pommes</p></li>
+<li><p>Prix : 12 euros</p></li>
+</ul>
+<p class="rubric">menu B</p>
+<ul class="simple">
+<li><p>Entrée : tomate mozarella</p></li>
+<li><p>Plat : sole meunière et légumes</p></li>
+<li><p>Dessert : tiramisu</p></li>
+<li><p>Prix : 16 euros</p></li>
+</ul>
+<p class="rubric">menu C</p>
+<ul class="simple">
+<li><p>Entrée : macédoine de légumes</p></li>
+<li><p>Plat : filet mignon et frites</p></li>
+<li><p>Dessert : mousse au chocolat</p></li>
+<li><p>Prix : 15 euros</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Créer pour chaque menu le dictionnaire associé. On les notera respectivement <code class="docutils literal notranslate"><span class="pre">menu_a</span></code>, <code class="docutils literal notranslate"><span class="pre">menu_b</span></code> et <code class="docutils literal notranslate"><span class="pre">menu_c</span></code>.</p></li>
+<li><p>Une erreur a été repérée dans le menu B. Le fromage « mozzarella » s’écrit avec deux « z ». Proposer une instruction python pour corriger cette erreur.</p></li>
+<li><p>Le restaurant a servi 10 menus A, 21 menus B et 9 menus C. Calculer la recette du restaurant pour ce service.</p></li>
+</ol>
+<p>Le restaurant souhaite calculer directement la recette d’un service à partir des commandes des clients selon les menus A, B et C.</p>
+<ol class="arabic simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">recette</span></code> prend en paramètres <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> et <code class="docutils literal notranslate"><span class="pre">c</span></code> associés respectivement aux nombres de menus A, B et C servis. La fonction renvoie la recette totale du service.</p>
+<ol class="loweralpha simple">
+<li><p>Écrire un code en Python de la fonction recette.</p></li>
+<li><p>Appliquer cette fonction aux valeurs de la question précédente.</p></li>
+</ol>
+</li>
+<li><p>On change le prix du menu A dans le dictionnaire qui passe à 13 euros.</p>
+<ol class="loweralpha simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">recette</span></code> est-elle toujours fonctionnelle ?</p></li>
+<li><p>Effectuer les modifications pour que la fonction reste toujours fonctionnelle quel que soit le prix des menus.</p></li>
+</ol>
+</li>
+</ol>
+<p>Le restaurant accepte, pour un prix de 17 euros, de servir aux clients des menus composés à partir des trois menus A, B et C. Pour réaliser ce menu spécial, on crée un dictionnaire dont les clés sont <code class="docutils literal notranslate"><span class="pre">entree</span></code>, <code class="docutils literal notranslate"><span class="pre">plat</span></code> et <code class="docutils literal notranslate"><span class="pre">dessert</span></code> et dont les valeurs sont les lettres <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;B&quot;</span></code> et <code class="docutils literal notranslate"><span class="pre">&quot;C&quot;</span></code> associés aux choix des clients selon les menus A, B et C.</p>
+<p>Par exemple, un client nommé Bob, prend l’entrée du menu A, le plat du menu C et le dessert du menu B. Le dictionnaire associé à son choix est <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">'entree':&quot;A&quot;,</span> <span class="pre">'plat':&quot;C&quot;,</span> <span class="pre">'dessert':&quot;B&quot;</span> <span class="pre">}</span></code>.</p>
+<ol class="arabic simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">compose</span></code> prend en paramètre un dictionnaire menu spécial et renvoie le dictionnaire correspondant au menu composé par le client. Écrire la fonction <code class="docutils literal notranslate"><span class="pre">compose</span></code> en Python.</p></li>
+<li><p>L’entrée du menu A est changée par des carottes rapées. Vérifier que la composition du menu spécial renvoie le bon menu avec la nouvelle entrée. Si ce n’est pas le cas, adapter votre code.</p></li>
+</ol>
+</section>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Link to this heading">#</a></h2>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">capitales.py</span></code> contient les différents pays du monde et leurs capitales réunis dans un même dictionnaire nommé <code class="docutils literal notranslate"><span class="pre">capitales</span></code>. Les clés de ce dictionnaire sont les noms des pays et les valeurs sont les capitales de chacun de ces pyas. Toutes les valeurs sont des chaines de caractère.</p>
+<p>Voici un extrait de ce dictionnaire:</p>
+<p>Pour utiliser ce dictionnaire, vous devez enregistrer ce fichier dans le même dossier que votre fichier de travail, puis réaliser un import.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">capitales</span> <span class="kn">import</span> <span class="n">capitales</span>
+</pre></div>
+</div>
+<p>Télécharger le fichier <code class="docutils literal notranslate"><span class="pre">capitales.py</span></code> disponible sur l’ENT puis importer le dans un nouveau fichier de travail python.</p>
+<p>Pour vérifier le bon import du dictionnaire, vous pouvez afficher le nombre de valeurs contenues dans le dictionnaire avec l’instruction <code class="docutils literal notranslate"><span class="pre">len(capitales)</span></code> en console.</p>
+<ol class="arabic">
+<li><p>En console, écrire une instruction python qui affiche la capitale de l”<strong>Uruguay</strong>.</p></li>
+<li><p>En console, écrire une instruction Python qui donne le pays dont la capiltale est <strong>Oulan-Bator</strong>.</p></li>
+<li><p>On veut créer un tableau <code class="docutils literal notranslate"><span class="pre">pays</span></code> qui contient tous les pays du dictionnaire <code class="docutils literal notranslate"><span class="pre">capitales</span></code> dont le nom commence par une lettre donnée.</p>
+<ol class="loweralpha simple">
+<li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">cle_par_initiale</span></code> qui prend en paramètres un dictionnaire <code class="docutils literal notranslate"><span class="pre">dico</span></code> et une lettre <code class="docutils literal notranslate"><span class="pre">lettre</span></code>. Cette fonction renvoie un tableau contenant toutes les clés du dictionnaire dont l’initiale est donnée par l’argument <code class="docutils literal notranslate"><span class="pre">lettre</span></code>. Si aucune clé ne convient, la fonction renvoie un tableau vide.</p></li>
+</ol>
+<blockquote>
+<div><p>Par exemple, pour le dictionnaire <code class="docutils literal notranslate"><span class="pre">dico</span> <span class="pre">=</span> <span class="pre">{'cle':6,'clou':4,'vis':8,'ecrou':6}</span></code>, l’appel <code class="docutils literal notranslate"><span class="pre">cle_par_initiale(dico,'c')</span></code> renvoie le tableau <code class="docutils literal notranslate"><span class="pre">['cle','clou']</span></code> et l’appel <code class="docutils literal notranslate"><span class="pre">cle_par_initiale(dico,'s')</span></code> renvoie <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><p>Quel appel doit-on écrire avec la fonction précédente pour obtenir les pays dont le nom commence par la lettre <strong>P</strong> ?</p></li>
+</ol>
+</li>
+<li><p>On veut créer un tableau <code class="docutils literal notranslate"><span class="pre">capitales</span></code> qui contient toutes les capitales du dictionnaire dont le nom commence par une lettre donnée.</p>
+<ol class="loweralpha simple">
+<li><p>En vous inspirant du code précédent, écrire une fonction <code class="docutils literal notranslate"><span class="pre">valeur_par_initiale</span></code> qui crée ce tableau.</p></li>
+<li><p>Comment peut-on créer le tableau contenant toutes les capitales commençant par la lettre <strong>L</strong> ?</p></li>
+</ol>
+</li>
+<li><p>Certains pays ont un nom de capitale identique au nom du pays. Cela revient à chercher dans un dictionnaire tous les items dont la clé est égale à la valeur.</p>
+<p>Par exemple, le dictionnaire <code class="docutils literal notranslate"><span class="pre">{'a':'a'</span> <span class="pre">,</span> <span class="pre">'b':'b',</span> <span class="pre">'c':'ab'}</span></code> possède 2 items dont les clés et les valeurs sont identiques.</p>
+<ol class="loweralpha simple">
+<li><p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">cle_egale_valeur</span></code> qui prend en paramètre un dictionnaire et renvoie dans un tableau les clés ou les valeurs lorsque celle-ci sont égales. S’il n’y en a pas, un tableau vide est renvoyé.</p></li>
+<li><p>Combien de pays ont un nom de capitale identique au nom du pays ?</p></li>
+</ol>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cours.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Le dictionnaire en Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tp_dictionnaire.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">TP sur les dictionnaires</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
