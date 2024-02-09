@@ -319,55 +319,60 @@ document.write(`
                   
   <section id="le-dictionnaire-en-python">
 <h1>Le dictionnaire en Python<a class="headerlink" href="#le-dictionnaire-en-python" title="Link to this heading">#</a></h1>
+<div class="definition admonition">
+<p class="admonition-title">Définition</p>
 <p>Un dictionnaire est une structure de données construite par des associations <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">:</span> <span class="pre">valeur</span></code>. Elle permet d’avoir plusieurs données dans une même variable.</p>
 <ul class="simple">
 <li><p>Un dictionnaire est de type <code class="docutils literal notranslate"><span class="pre">dict</span></code>.</p></li>
-<li><p>Un dictionnaire est un type <strong>non ordonné</strong>.</p></li>
 <li><p>Un dictionnaire est un type <strong>mutable</strong>, ce qui signifie qu’on peut modifier ses éléments.</p></li>
 <li><p>Les <strong>clés</strong> d’un dictionnaire sont uniques et non mutables (non modifiables).</p></li>
 <li><p>Les <strong>valeurs</strong> d’un dictionnaire peuvent être de tout type, mutable ou non mutable.</p></li>
 <li><p>Chaque <strong>item</strong> d’un dictionnaire est composé d’une <strong>clé</strong> et d’une <strong>valeur</strong>.</p></li>
 </ul>
-<p>En Python, on note un dictionnaire entre accolades : <code class="docutils literal notranslate"><span class="pre">dico={clé</span> <span class="pre">1</span> <span class="pre">:</span> <span class="pre">valeur</span> <span class="pre">1,</span> <span class="pre">clé</span> <span class="pre">2</span> <span class="pre">:</span> <span class="pre">valeur</span> <span class="pre">2,</span> <span class="pre">...}</span></code></p>
-<div class="admonition-exemple admonition" id="exemple">
-<p class="admonition-title">Exemple</p>
-<p>On définit une variable <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> de type <code class="docutils literal notranslate"><span class="pre">dict</span></code> dont les clés sont <code class="docutils literal notranslate"><span class="pre">race</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code> et <code class="docutils literal notranslate"><span class="pre">couleur</span></code>.</p>
-<p>À chaque clé, on associe les valeurs : <code class="docutils literal notranslate"><span class="pre">'labrador'</span></code>, <code class="docutils literal notranslate"><span class="pre">'noir'</span></code> qui sont de type <code class="docutils literal notranslate"><span class="pre">string</span></code> et <code class="docutils literal notranslate"><span class="pre">7</span></code> de type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+</div>
+<p>En Python, on note un dictionnaire entre accolades. Par exemple, on définit une variable <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> de type <code class="docutils literal notranslate"><span class="pre">dict</span></code> dont les clés sont <code class="docutils literal notranslate"><span class="pre">race</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code> et <code class="docutils literal notranslate"><span class="pre">couleur</span></code>.
+À chaque clé, on associe les valeurs : <code class="docutils literal notranslate"><span class="pre">'labrador'</span></code>, <code class="docutils literal notranslate"><span class="pre">'noir'</span></code> qui sont de type <code class="docutils literal notranslate"><span class="pre">string</span></code> et la valeur <code class="docutils literal notranslate"><span class="pre">7</span></code> de type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>Dans la console Python:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;race&#39;</span> <span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span> <span class="p">:</span> <span class="s1">&#39;noir&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">))</span>
 <span class="go">&lt;class &#39;dict&#39;&gt;</span>
 </pre></div>
 </div>
-</div>
 <p class="rubric">Accéder à une valeur d’un dictionnaire</p>
+<div class="propriete admonition">
+<p class="admonition-title">Syntaxe</p>
 <p>On accède à une valeur d’un dictionnaire avec sa clé:</p>
 <ol class="arabic simple">
 <li><p>La variable dictionnaire est suivie de la clé notée entre 2 crochets : <code class="docutils literal notranslate"><span class="pre">dico[clé]</span></code>.</p></li>
 <li><p>La variable est suivie de la méthode <code class="docutils literal notranslate"><span class="pre">get</span></code> avec le paramètre <code class="docutils literal notranslate"><span class="pre">clé</span></code> : <code class="docutils literal notranslate"><span class="pre">dico.get(clé)</span></code></p></li>
 </ol>
-<div class="admonition-exemple admonition" id="id1">
-<p class="admonition-title">Exemple</p>
+</div>
 <p>On reprend la variable <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> de type <strong>dict</strong> définie dans l’exemple précédent.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;race&#39;</span> <span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span> <span class="p">:</span> <span class="s1">&#39;noir&#39;</span><span class="p">}</span>
-
-<span class="go"># obtenir la race de mon chien:</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">]</span>
-<span class="go">&#39;labrador&#39;</span>
-
-<span class="go"># obtenir l&#39;âge de mon chien:</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-<span class="go">7</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;race&#39;</span> <span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span> <span class="p">:</span> <span class="s1">&#39;noir&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
+<p>Pour obtenir la race de mon chien:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">]</span>
+<span class="go">&#39;labrador&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;race&#39;</span><span class="p">)</span>
+<span class="go">&#39;labrador&#39;</span>
+</pre></div>
+</div>
+<p>Pour obtenir l’âge de mon chien:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
 </div>
 <section id="creer-un-dictionnaire">
 <h2>Créer un dictionnaire<a class="headerlink" href="#creer-un-dictionnaire" title="Link to this heading">#</a></h2>
 <p>La création d’un dictionnaire se réalise de différentes manières selon qu’il est vide ou avec des valeurs initiales.</p>
 <p class="rubric">Dictionnaire vide</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">dict()</span></code> crée un dictionnaire vide.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dico_1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dico_1</span><span class="p">)</span>
-<span class="p">{}</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dico_1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dico_1</span><span class="p">)</span>
+<span class="go">{}</span>
 </pre></div>
 </div>
 <p>On peut aussi créer un dictionnaire vide en affectant à la variable une paire d’accolades :</p>
@@ -375,7 +380,7 @@ document.write(`
 </pre></div>
 </div>
 <p class="rubric">Dictionnaire avec valeurs initiales</p>
-<p>Pour créer un dictionnaire non vide, contenant des valeurs, on note les associations <code class="docutils literal notranslate"><span class="pre">clés:valeurs</span></code> entre accolades en les séparant par une virgule.</p>
+<p>Pour créer un dictionnaire contenant des valeurs, on note les associations <code class="docutils literal notranslate"><span class="pre">clés:valeurs</span></code> entre accolades en les séparant par une virgule.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dico_3</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;cle_1&#39;</span> <span class="p">:</span> <span class="s1">&#39;une valeur&#39;</span><span class="p">,</span> <span class="s1">&#39;cle_2&#39;</span> <span class="p">:</span> <span class="s1">&#39;autre valeur&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -387,84 +392,105 @@ document.write(`
 <section id="modifier-un-dictionnaire">
 <h2>Modifier un dictionnaire<a class="headerlink" href="#modifier-un-dictionnaire" title="Link to this heading">#</a></h2>
 <p class="rubric">Ajouter ou modifier une valeur</p>
+<div class="propriete admonition">
+<p class="admonition-title">Syntaxe</p>
 <p>La modification d’un dictionnaire ou l’ajout d’une nouvelle association <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">:</span> <span class="pre">valeur</span></code> se fait directement par affectation : <code class="docutils literal notranslate"><span class="pre">dico[nouvelle</span> <span class="pre">clé]</span> <span class="pre">=</span> <span class="pre">valeur</span></code>.</p>
 <ul class="simple">
 <li><p>Si la clé n’existe pas, elle est ajoutée au dictionnaire avec sa valeur associée;</p></li>
 <li><p>Si la clé existe déjà, la valeur est remplacée par la nouvelle valeur.</p></li>
 </ul>
-<div class="admonition-exemple admonition">
-<p class="admonition-title">Exemple</p>
+</div>
 <p>On reprend la variable <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> de type <strong>dict</strong> définie dans l’exemple précédent.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Afficher le dictionnaire de mon chien:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
-<span class="p">{</span><span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span><span class="p">:</span> <span class="s1">&#39;noir&#39;</span><span class="p">}</span>
-
-<span class="c1"># Modifier la couleur de mon chien:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;couleur&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sable&#39;</span>
-
-<span class="c1"># Modifier l&#39;âge de mon chien:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Ajouter le poids de mon chien:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;poids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
-
-<span class="c1"># Afficher le dictionnaire modifié de mon chien:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
-<span class="p">{</span><span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span><span class="p">:</span> <span class="s1">&#39;sable&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
+<p>On affiche le dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
+<span class="go">{&#39;race&#39;: &#39;labrador&#39;, &#39;age&#39;: 7, &#39;couleur&#39;: &#39;noir&#39;}</span>
 </pre></div>
 </div>
+<p>On modifie la couleur de mon chien par la valeur <code class="docutils literal notranslate"><span class="pre">sable</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;couleur&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sable&#39;</span>
+</pre></div>
+</div>
+<p>On modifie l’âge de mon chien</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>On ajoute le poids de mon chien en créant la clé <code class="docutils literal notranslate"><span class="pre">poids</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;poids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+</pre></div>
+</div>
+<p>Afficher le dictionnaire modifié de mon chien:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
+<span class="go">{&#39;race&#39;: &#39;labrador&#39;, &#39;age&#39;: 8, &#39;couleur&#39;: &#39;sable&#39;, &#39;poids&#39;: 40}</span>
+</pre></div>
 </div>
 <p class="rubric">Modifier une clé</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
 <p>Il n’est pas possible de modifier une clé ! Mais on peut la supprimer puis en ajouter une nouvelle.</p>
-<p>Pour supprimer une association <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">:</span> <span class="pre">valeur</span></code>, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">del</span></code> avec l’instruction <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">dico[clé]</span></code>.</p>
-<div class="admonition-exemple admonition" id="id2">
-<p class="admonition-title">Exemple</p>
-<p>On supprime la clef <code class="docutils literal notranslate"><span class="pre">'poids'</span></code> pour la remplacer par la clé <code class="docutils literal notranslate"><span class="pre">'masse'</span></code> du dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span><span class="p">:</span> <span class="s1">&#39;sable&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;poids&#39;</span><span class="p">]</span>
+<p>La suppression de la clé d’un dictionnaire entraine la suppression de la valeur!</p>
+<p>Pour supprimer une <code class="docutils literal notranslate"><span class="pre">clé</span></code>, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">del</span></code> avec l’instruction <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">dico[clé]</span></code>.</p>
+</div>
+<p>Dans l’exemple suivant, on définit un dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> avec la clé <code class="docutils literal notranslate"><span class="pre">poids</span></code>. Ensuite, on supprime la clé <code class="docutils literal notranslate"><span class="pre">'poids'</span></code> pour la remplacer par la clé <code class="docutils literal notranslate"><span class="pre">'masse'</span></code>. On donne ci-dessous les différentes instructions pour le réaliser.</p>
+<p>On définit notre dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span><span class="p">:</span> <span class="s1">&#39;sable&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>On supprime la clé <code class="docutils literal notranslate"><span class="pre">poids</span></code> du dictionnaire et on l’affiche</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;poids&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
 <span class="go">{&#39;race&#39;: &#39;labrador&#39;, &#39;age&#39;: 8, &#39;couleur&#39;: &#39;sable&#39;}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;masse&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span>
+</pre></div>
+</div>
+<p>On ajoute la nouvelle clé <code class="docutils literal notranslate"><span class="pre">masse</span></code> associée à la valeur <code class="docutils literal notranslate"><span class="pre">40</span></code> au dictionnaire et on l’affiche</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_chien</span><span class="p">[</span><span class="s1">&#39;masse&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="p">)</span>
 <span class="go">{&#39;race&#39;: &#39;labrador&#39;, &#39;age&#39;: 8, &#39;couleur&#39;: &#39;sable&#39;, &#39;masse&#39;: 40}</span>
 </pre></div>
 </div>
-</div>
 </section>
 <section id="methodes-sur-les-dictionnaires">
 <h2>Méthodes sur les dictionnaires<a class="headerlink" href="#methodes-sur-les-dictionnaires" title="Link to this heading">#</a></h2>
+<div class="definition admonition">
+<p class="admonition-title">Définition</p>
 <p>En python, les dictionnaires sont des objets possédants des <strong>méthodes</strong> qui leurs sont propres. Cela signifie qu’elles ne s’appliquent qu’aux dictionnaires.</p>
+<p>Les <strong>méthodes</strong> sont des fonctions qui s’appliquent avec la notation <strong>pointée</strong>. Cela signfie qu’on les appelle en les plaçant après la variable de type dictionnaire séparée par un <strong>point</strong>.</p>
+</div>
+<div class="propriete admonition">
+<p class="admonition-title">Méthodes</p>
 <ol class="arabic simple">
-<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">keys()</span></code> renvoie toutes les clés du dictionnaire. La valeur renvoyée par cette méthode est de type <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code> qui est <strong>itérable</strong>. Cela signifie que l’on peut accéder à chacune des clés avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
-<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">values()</span></code> renvoie toutes les valeurs du dictionnaire. La valeur renvoyée par cette méthode est de type
-<code class="docutils literal notranslate"><span class="pre">dict_values</span></code> qui est <strong>itérable</strong>. Cela signifie que l’on peut à chacune des valeurs avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
-<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">items()</span></code> renvoie toutes les assoiations <code class="docutils literal notranslate"><span class="pre">clés</span> <span class="pre">:</span> <span class="pre">valeurs</span></code> du dictionnaire où chaque association est un <strong>tuple</strong>. La valeur renvoyée par cette méthode est de type <code class="docutils literal notranslate"><span class="pre">dict_items</span></code> qui est <strong>itérable</strong>. Cela signifie que l’on peut à chacun des tuples avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">keys()</span></code> renvoie toutes les clés du dictionnaire. La valeur renvoyée par cette méthode est de type <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code>.</p></li>
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">values()</span></code> renvoie toutes les valeurs du dictionnaire. La valeur renvoyée par cette méthode est de type <code class="docutils literal notranslate"><span class="pre">dict_values</span></code>.</p></li>
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">items()</span></code> renvoie toutes les assoiations <code class="docutils literal notranslate"><span class="pre">clés</span> <span class="pre">:</span> <span class="pre">valeurs</span></code> du dictionnaire où chaque association est un <strong>tuple</strong>. La valeur renvoyée par cette méthode est de type <code class="docutils literal notranslate"><span class="pre">dict_items</span></code>.</p></li>
 </ol>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>À noter que les valeurs renvoyées par ces trois méthodes peuvent se transformer en liste avec la fonction <code class="docutils literal notranslate"><span class="pre">list()</span></code>.</p>
+<ol class="arabic simple">
+<li><p>Les types <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code>, <code class="docutils literal notranslate"><span class="pre">dict_values</span></code> et <code class="docutils literal notranslate"><span class="pre">dict_items</span></code> sont <strong>itérables</strong>. Cela signifie qu’on peut accéder à chacune des valeurs avec une boucle (<code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">while</span></code>).</p></li>
+<li><p>Les types <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code>, <code class="docutils literal notranslate"><span class="pre">dict_values</span></code> et <code class="docutils literal notranslate"><span class="pre">dict_items</span></code> peuvent se transformer en liste avec la fonction <code class="docutils literal notranslate"><span class="pre">list()</span></code>.</p></li>
+</ol>
 </div>
-<div class="admonition-exemple admonition">
-<p class="admonition-title">Exemple</p>
-<p>On applique chacune de ces méthodes au dictionnaire de mon chien.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Récupérer les clés du dictionnaire mon_chien</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;couleur&#39;</span><span class="p">,</span> <span class="s1">&#39;masse&#39;</span><span class="p">])</span>
-
-<span class="c1"># Récupérer les valeurs du dictionnaire mon_chien</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="n">dict_values</span><span class="p">([</span><span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;sable&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
-
-<span class="c1"># Récupérer les items (clé, valeur) du dictionnaire mon_chien</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
-<span class="n">dict_items</span><span class="p">([(</span><span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;labrador&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;couleur&#39;</span><span class="p">,</span> <span class="s1">&#39;sable&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;masse&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)])</span>
-
-<span class="c1"># Récupérer les valeurs du dictionnaire dans une liste</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;les valeurs dans une liste:&quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
-<span class="n">les</span> <span class="n">valeurs</span> <span class="n">dans</span> <span class="n">une</span> <span class="n">liste</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;labrador&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;sable&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<p>On applique chacune de ces méthodes au dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code>.</p>
+<p>Récupérer les clés du dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">dict_keys([&#39;race&#39;, &#39;age&#39;, &#39;couleur&#39;, &#39;masse&#39;])</span>
 </pre></div>
 </div>
+<p>Récupérer les valeurs du dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">dict_values([&#39;labrador&#39;, 8, &#39;sable&#39;, 40])</span>
+</pre></div>
+</div>
+<p>Récupérer les items (clé, valeur) du dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">dict_items([(&#39;race&#39;, &#39;labrador&#39;), (&#39;age&#39;, 8), (&#39;couleur&#39;, &#39;sable&#39;), (&#39;masse&#39;, 40)])</span>
+</pre></div>
+</div>
+<p>Récupérer les valeurs du dictionnaire <code class="docutils literal notranslate"><span class="pre">mon_chien</span></code> dans une liste</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mon_chien</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;les valeurs dans une liste:&quot;</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="go">les valeurs dans une liste: [&#39;labrador&#39;, 8, &#39;sable&#39;, 40]</span>
+</pre></div>
 </div>
 </section>
 </section>
