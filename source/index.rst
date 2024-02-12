@@ -16,6 +16,5 @@ L’ordre est important dans la notation. En premier, on écrit la **clé** et e
    content/activite.rst
    content/cours.rst
    content/exercice.rst
-   content/tp_dictionnaire.rst
    content/exercice_bac.rst
    content/exercice_epreuve_pratique.rst
