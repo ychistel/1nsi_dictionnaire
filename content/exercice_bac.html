@@ -49,7 +49,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Épreuve pratique" href="exercice_epreuve_pratique.html" />
-    <link rel="prev" title="TP sur les dictionnaires" href="tp_dictionnaire.html" />
+    <link rel="prev" title="Exercice sur les dictionnaires" href="exercice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -154,7 +154,6 @@
 <li class="toctree-l1"><a class="reference internal" href="activite.html">Activité sur les dictionnaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cours.html">Le dictionnaire en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercice sur les dictionnaires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tp_dictionnaire.html">TP sur les dictionnaires</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Épreuve écrite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercice_epreuve_pratique.html">Épreuve pratique</a></li>
 </ul>
@@ -327,46 +326,47 @@ document.write(`
 <div class="reference docutils container">
 <p class="rubric">Informations</p>
 <ul class="simple">
-<li><p>Code de l’épreuve: <code class="xref download docutils literal notranslate"><span class="pre">22-NSIJ1G11</span></code></p></li>
+<li><p>Code de l’épreuve: <a class="reference download internal" download="" href="../_downloads/82fddf2fdea7e659f3fceceeba62ce98/ex_22-nsij1g11.pdf"><code class="xref download docutils literal notranslate"><span class="pre">22-NSIJ1G11</span></code></a></p></li>
 <li><p>Exercice : 1</p></li>
 <li><p>Thèmes : listes, p-uplet, dictionnaires</p></li>
 </ul>
 </div>
 <p>On dispose de la liste jours suivante et du dictionnaire mois suivant :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jours</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dimanche&quot;</span><span class="p">,</span> <span class="s2">&quot;lundi&quot;</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dimanche&quot;</span><span class="p">,</span> <span class="s2">&quot;lundi&quot;</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span><span class="p">]</span>
 
-<span class="n">mois</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span> <span class="p">:(</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">:(</span><span class="s2">&quot;février&quot;</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span> <span class="p">,</span> <span class="mi">3</span> <span class="p">:(</span><span class="s2">&quot;mars&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span> <span class="mi">4</span> <span class="p">:(</span><span class="s2">&quot;avril&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span>\
-      <span class="mi">5</span> <span class="p">:(</span><span class="s2">&quot;mai&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">6</span> <span class="p">:(</span><span class="s2">&quot;juin&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">7</span> <span class="p">:(</span><span class="s2">&quot;juillet&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">8</span> <span class="p">:(</span><span class="s2">&quot;aout&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> \
-      <span class="mi">9</span> <span class="p">:(</span><span class="s2">&quot;septembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">10</span> <span class="p">:(</span><span class="s2">&quot;octobre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">11</span> <span class="p">:(</span><span class="s2">&quot;novembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">12</span> <span class="p">:(</span><span class="s2">&quot;décembre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)}</span>
+<span class="n">mois</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span> <span class="p">:(</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">:(</span><span class="s2">&quot;février&quot;</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span> <span class="p">,</span> <span class="mi">3</span> <span class="p">:(</span><span class="s2">&quot;mars&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span> <span class="mi">4</span> <span class="p">:(</span><span class="s2">&quot;avril&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span>\
+    <span class="mi">5</span> <span class="p">:(</span><span class="s2">&quot;mai&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">6</span> <span class="p">:(</span><span class="s2">&quot;juin&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">7</span> <span class="p">:(</span><span class="s2">&quot;juillet&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">8</span> <span class="p">:(</span><span class="s2">&quot;aout&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> \
+    <span class="mi">9</span> <span class="p">:(</span><span class="s2">&quot;septembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">10</span> <span class="p">:(</span><span class="s2">&quot;octobre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span> <span class="p">,</span> <span class="mi">11</span> <span class="p">:(</span><span class="s2">&quot;novembre&quot;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="p">,</span> <span class="mi">12</span> <span class="p">:(</span><span class="s2">&quot;décembre&quot;</span><span class="p">,</span><span class="mi">31</span><span class="p">)}</span>
 </pre></div>
 </div>
 <ol class="arabic">
-<li><ol class="loweralpha">
+<li><ol class="loweralpha simple">
 <li><p>A partir de la liste jours, comment obtenir l’élément « lundi » ?</p></li>
-<li><p>On rappelle que l’opérateur % (« modulo ») renvoie le reste de la division entière (division euclidienne).</p>
+<li><p>On rappelle que l’opérateur % (« modulo ») renvoie le reste de la division entière (division euclidienne).</p></li>
+</ol>
 <div class="admonition-exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p><span class="math notranslate nohighlight">\(7\%3\)</span> renvoie 1 qui est le reste de la division de 7 par 3.</p>
+<p><span class="math notranslate nohighlight">\(7 \% 3\)</span> renvoie 1 qui est le reste de la division de 7 par 3.</p>
 <img alt="../_images/modulo.png" class="align-center" src="../_images/modulo.png" />
 </div>
-<p>Que renvoie l’instruction <code class="docutils literal notranslate"><span class="pre">jours[18%7]</span></code> ?</p>
-</li>
-</ol>
+<p>Que renvoie l’instruction <code class="docutils literal notranslate"><span class="pre">jours[18</span> <span class="pre">%</span> <span class="pre">7]</span></code> ?</p>
 </li>
 <li><p>On rappelle que <code class="docutils literal notranslate"><span class="pre">jours.index[element]</span></code> renvoie l’indice de <code class="docutils literal notranslate"><span class="pre">element</span></code> dans la liste jours.
 Par exemple <code class="docutils literal notranslate"><span class="pre">jours.index[&quot;mercredi&quot;]</span></code> renvoie 3.</p>
 <p>Le nom du jour actuel est stocké dans une variable j (par exemple : j = « mardi »). Recopier et compléter l’instruction suivante permettant d’obtenir le numéro du jour de la semaine n jours plus tard :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero_jour</span> <span class="o">=</span><span class="p">(</span><span class="n">jours</span><span class="o">.</span><span class="n">index</span><span class="p">[</span> <span class="err">…</span> <span class="p">]</span> <span class="o">+</span> <span class="err">…</span> <span class="p">)</span><span class="o">%</span> <span class="err">…</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero_jour</span> <span class="o">=</span><span class="p">(</span><span class="n">jours</span><span class="o">.</span><span class="n">index</span><span class="p">[</span> <span class="s1">&#39;…&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;…&#39;</span> <span class="p">)</span><span class="o">%</span> <span class="s1">&#39;…&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><ol class="loweralpha simple">
+<li><ol class="loweralpha">
 <li><p>A partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?</p></li>
 <li><p>Le numéro du mois actuel est stocké dans une variable numero_mois, écrire le code permettant d’obtenir le nom du mois qu’il sera x mois plus tard à partir du dictionnaire mois. Par exemple :</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">4</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, on doit obtenir « septembre »</p></li>
 <li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">10</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3</span></code>, on doit obtenir « janvier »</p></li>
 </ul>
+</div></blockquote>
 </li>
 </ol>
 </li>
@@ -378,9 +378,9 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <span class="gp">&gt;&gt;&gt; </span><span class="n">jour_suivant</span><span class="p">(</span> <span class="p">(</span><span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span> <span class="p">)</span> <span class="n">renvoie</span> <span class="p">(</span><span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>On ne tient pas compte des années bissextiles et on considère que le mois de février comporte toujours 28 jours.</p>
 </li>
 </ol>
+<p>On ne tient pas compte des années bissextiles et on considère que le mois de février comporte toujours 28 jours.</p>
 </li>
 </ol>
 </section>
@@ -415,34 +415,34 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <li><p>cle in dico renvoie un booléen indiquant si la clé cle est présente dans le dictionnaire dico,</p></li>
 <li><p>del dico[cle] supprime la clé cle et sa valeur associée du dico.</p></li>
 <li><p>dico.keys() renvoie la liste des clés du dictionnaire dico</p></li>
-<li></li>
 </ul>
 <p>L’adresse d’un fichier ou d’un dossier correspond au nom de tous les dossiers à parcourir depuis la racine afin d’accéder au fichier ou au dossier. Cette adresse est modélisée en Python par la liste des noms de dossier à parcourir pour y accéder.</p>
 <p>Exemple : L’adresse du dossier : <code class="docutils literal notranslate"><span class="pre">/home/pierre/Documents/</span></code> est modélisée par la liste <code class="docutils literal notranslate"><span class="pre">[&quot;home&quot;,</span> <span class="pre">&quot;pierre&quot;,</span> <span class="pre">&quot;Documents&quot;]</span></code>.</p>
 <ol class="arabic">
 <li><p>Dessiner l’arbre donné par le dictionnaire suivant, qui correspond au dossier <code class="docutils literal notranslate"><span class="pre">Documents</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Documents</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s2">&quot;Administratif&quot;</span><span class="p">:{</span>
-   <span class="s2">&quot;certificat JDC.pdf &quot;</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span>
-   <span class="s2">&quot;attestation recensement.pdf &quot;</span><span class="p">:</span> <span class="mi">850</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;Cours&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;NSI&quot;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="s2">&quot;TP.html &quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-         <span class="s2">&quot;dm.odt&quot;</span><span class="p">:</span> <span class="mi">345</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;Philo&quot;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="s2">&quot;Tractatus logico-philosophicus.epub&quot;</span><span class="p">:</span> <span class="mi">2600</span>
-      <span class="p">}</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;liste de courses.txt &quot;</span><span class="p">:</span> <span class="mi">24</span>
+    <span class="s2">&quot;Administratif&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;certificat JDC.pdf &quot;</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span>
+    <span class="s2">&quot;attestation recensement.pdf &quot;</span><span class="p">:</span> <span class="mi">850</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Cours&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;NSI&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;TP.html &quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;dm.odt&quot;</span><span class="p">:</span> <span class="mi">345</span>
+        <span class="p">},</span>
+    <span class="s2">&quot;Philo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Tractatus logico-philosophicus.epub&quot;</span><span class="p">:</span> <span class="mi">2600</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;liste de courses.txt &quot;</span><span class="p">:</span> <span class="mi">24</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </li>
 <li><ol class="loweralpha">
 <li><p>On donne la fonction Parcourir suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.</p>
-<p>Exemple : Si la variable <code class="docutils literal notranslate"><span class="pre">Documents</span></code> contient le dictionnaire de l’exemple de la question 1 alors <code class="docutils literal notranslate"><span class="pre">Parcourir(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;Philo&quot;])</span></code> renvoie le dictionnaire <code class="docutils literal notranslate"><span class="pre">{&quot;Tractatus</span> <span class="pre">logicophilosophicus.epub&quot;:</span> <span class="pre">2600}</span></code>.</p>
+<blockquote>
+<div><p>Exemple : Si la variable <code class="docutils literal notranslate"><span class="pre">Documents</span></code> contient le dictionnaire de l’exemple de la question 1 alors <code class="docutils literal notranslate"><span class="pre">Parcourir(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;Philo&quot;])</span></code> renvoie le dictionnaire <code class="docutils literal notranslate"><span class="pre">{&quot;Tractatus</span> <span class="pre">logicophilosophicus.epub&quot;:</span> <span class="pre">2600}</span></code>.</p>
 <p>Recopier et compléter la ligne 4:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">):</span>
     <span class="n">dossier</span> <span class="o">=</span> <span class="n">racine</span>
@@ -451,14 +451,17 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
     <span class="k">return</span> <span class="n">dossier</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Soit la fonction suivante :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Afficher</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">):</span>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Afficher</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">):</span>
     <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Qu’affiche l’instruction <code class="docutils literal notranslate"><span class="pre">Afficher(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;NSI&quot;],&quot;TP.html&quot;)</span></code> sachant que la variable Documents contient le dictionnaire de la question 1 ?</p>
+</div></blockquote>
 </li>
 </ol>
 </li>
@@ -466,12 +469,14 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <ol class="arabic" start="3">
 <li><ol class="loweralpha">
 <li><p>La fonction <code class="docutils literal notranslate"><span class="pre">Ajouter(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_fichier,</span> <span class="pre">taille)</span></code> suivante ajoute au dictionnaire <code class="docutils literal notranslate"><span class="pre">racine</span></code>, à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>, la clé nom_fichier associé à la valeur taille.</p>
-<p>Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.</p>
+<blockquote>
+<div><p>Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ajouter_fichier</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
-   <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
-   <span class="n">taille</span> <span class="o">=</span> <span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">]</span>
+    <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
+    <span class="n">taille</span> <span class="o">=</span> <span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">]</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">Ajouter_dossier(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_dossier)</span></code> pour créer un dictionnaire représentant un dossier vide appelé <code class="docutils literal notranslate"><span class="pre">nom_dossier</span></code> dans le dictionnaire racine à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>.</p></li>
 </ol>
@@ -501,29 +506,31 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <p>Codages des structures de données utilisées :</p>
 <ul>
 <li><p>Liste des liaisons d’un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type « tableau de tableaux ».</p>
-<div class="admonition warning">
+<blockquote>
+<div><div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Seules les liaisons directes existent, par exemple [« Toulouse », »Muret »] ou [« Muret », »Toulouse »]. Par contre, le tableau [« Toulouse », »Mazamet »] n’existe pas, puisque la ligne Toulouse-Mazamet passe par Castres.</p>
 </div>
 <p>Le joueur 1 possède les lignes directes « Toulouse-Muret », « Toulouse-Montauban », « Gaillac-St Sulpice » et « Muret-Pamiers » (liaisons indiquées en noir sur la figure ci-dessus). Ces liaisons sont mémorisées dans la variable ci-après.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">liaisonsJoueur1</span> <span class="o">=</span> <span class="p">[</span>
-   <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Muret&quot;</span><span class="p">],</span>
-   <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
-   <span class="p">[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">,</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
-   <span class="p">[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">]</span>
+    <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Muret&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">,</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 <li><p>Dictionnaire associé à un joueur : On code la liste des villes et des trajets possédée par un joueur en utilisant un dictionnaire de tableaux. Chaque clef de ce dictionnaire est une ville de départ, et chaque valeur est un tableau contenant les villes d’arrivée possibles en fonction des liaisons possédées par le joueur.</p>
 <p>Le dictionnaire de tableaux du joueur 1 est donné ci-après :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DictJoueur1</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s2">&quot;Toulouse&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
-   <span class="s2">&quot;Montauban&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">],</span>
-   <span class="s2">&quot;Gaillac&quot;</span><span class="p">:[</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
-   <span class="s2">&quot;St Sulpice&quot;</span><span class="p">:[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">],</span>
-   <span class="s2">&quot;Muret&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">],</span>
-   <span class="s2">&quot;Pamiers&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;Toulouse&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">,</span><span class="s2">&quot;Montauban&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Montauban&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Gaillac&quot;</span><span class="p">:[</span><span class="s2">&quot;St Sulpice&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;St Sulpice&quot;</span><span class="p">:[</span><span class="s2">&quot;Gaillac&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Muret&quot;</span><span class="p">:[</span><span class="s2">&quot;Toulouse&quot;</span><span class="p">,</span><span class="s2">&quot;Pamiers&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Pamiers&quot;</span><span class="p">:[</span><span class="s2">&quot;Muret&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -560,26 +567,38 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <p>La cryptographie est un ensemble de techniques permettant de chiffrer un message. Une technique de cryptographie consiste à mélanger les lettres d’un alphabet et à réécrire le message avec ces permutations. En Python, on peut créer un dictionnaire dans lequel les clés sont les lettres de l’alphabet et les valeurs sont celles de l’alphabet mélangé.</p>
 <div class="admonition-exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p>Si l’alphabet contient les 4 lettres A, B, C et D, et si le dictionnaire de l’alphabet mélangé est <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:</span> <span class="pre">&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:</span> <span class="pre">&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:</span> <span class="pre">&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:</span> <span class="pre">&quot;C&quot;}</span></code>, la chaîne de caractères <code class="docutils literal notranslate"><span class="pre">&quot;BAC&quot;</span></code> sera chiffrée <code class="docutils literal notranslate"><span class="pre">&quot;DBA&quot;</span></code>.</p>
+<p>Si l’alphabet contient les 4 lettres A, B, C et D, et si le dictionnaire de l’alphabet mélangé est :</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:</span> <span class="pre">&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:</span> <span class="pre">&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:</span> <span class="pre">&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:</span> <span class="pre">&quot;C&quot;}</span></code></p>
+<p>alors, la chaîne de caractères <code class="docutils literal notranslate"><span class="pre">&quot;BAC&quot;</span></code> sera chiffrée <code class="docutils literal notranslate"><span class="pre">&quot;DBA&quot;</span></code>.</p>
 </div>
 <p>Un tel dictionnaire sera appelé <strong>dictionnaire de chiffrement</strong>.</p>
 <ol class="arabic">
-<li><p>On souhaite chiffrer un message écrit avec l’alphabet A, B, C, D, E, F, G à l’aide du dictionnaire <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code>.</p>
+<li><p>On souhaite chiffrer un message écrit avec l’alphabet A, B, C, D, E, F, G à l’aide du dictionnaire :</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code>.</p>
 <ol class="loweralpha simple">
 <li><p>Quelle est la valeur associée à la clé <code class="docutils literal notranslate"><span class="pre">&quot;D&quot;</span></code> ? En Python, comment l’obtenir ?</p></li>
 <li><p>Chiffrer la chaîne de caractères <code class="docutils literal notranslate"><span class="pre">&quot;BAGAGE&quot;</span></code> avec le dictionnaire <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p></li>
 </ol>
 </li>
-<li><p>On considère qu’un mot est une chaîne de caractères (un objet de type str) écrite uniquement avec les 26 lettres de l’alphabet en majuscule. Par exemple, <code class="docutils literal notranslate"><span class="pre">&quot;ARBRE&quot;</span></code> est un mot et <code class="docutils literal notranslate"><span class="pre">&quot;L’ARBRE</span> <span class="pre">!&quot;</span></code> n’est pas un mot à cause des caractères : « ’ », «  « (espace) et « ! ».</p>
-<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">chiffrer(mot,</span> <span class="pre">alpha)</span></code> qui prend en paramètres <code class="docutils literal notranslate"><span class="pre">mot</span></code> un mot et <code class="docutils literal notranslate"><span class="pre">alpha</span></code> un dictionnaire de chiffrement, et qui renvoie une chaîne de caractères chiffrée avec le dictionnaire de chiffrement <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
-</li>
+<li><p>On considère qu’un mot est une chaîne de caractères (un objet de type str) écrite uniquement avec les 26 lettres de l’alphabet en majuscule. Par exemple, <code class="docutils literal notranslate"><span class="pre">&quot;ARBRE&quot;</span></code> est un mot et <code class="docutils literal notranslate"><span class="pre">&quot;L’ARBRE</span> <span class="pre">!&quot;</span></code> n’est pas un mot à cause des caractères : « ’ », «  « (espace) et « ! ».  Écrire une fonction <code class="docutils literal notranslate"><span class="pre">chiffrer(mot,</span> <span class="pre">alpha)</span></code> qui prend en paramètres <code class="docutils literal notranslate"><span class="pre">mot</span></code> un mot et <code class="docutils literal notranslate"><span class="pre">alpha</span></code> un dictionnaire de chiffrement, et qui renvoie une chaîne de caractères chiffrée avec le dictionnaire de chiffrement <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p></li>
 <li><p>On souhaite déchiffrer un mot chiffré avec cette méthode.</p>
-<ol class="loweralpha simple">
-<li><p>Si un mot est chiffré avec le dictionnaire de chiffrement <code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code>, donner un dictionnaire permettant de le déchiffrer.</p></li>
-<li><p>Ecrire une fonction en Python appelée <code class="docutils literal notranslate"><span class="pre">dico_dechiffrement(dico)</span></code> qui prend en paramètre dico un dictionnaire de chiffrement et qui renvoie un dictionnaire permettant le déchiffrement. On pourra s’inspirer du code incomplet ci-dessous ou proposer une autre solution :</p></li>
+<ol class="loweralpha">
+<li><p>Un mot est chiffré avec le dictionnaire de chiffrement :</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">={&quot;A&quot;:&quot;B&quot;,</span> <span class="pre">&quot;B&quot;:&quot;D&quot;,</span> <span class="pre">&quot;C&quot;:&quot;A&quot;,</span> <span class="pre">&quot;D&quot;:&quot;C&quot;,</span> <span class="pre">&quot;E&quot;:&quot;F&quot;,</span> <span class="pre">&quot;F&quot;:&quot;G&quot;,</span> <span class="pre">&quot;G&quot;:&quot;E&quot;}</span></code></p>
+<p>Donner un dictionnaire permettant de le déchiffrer.</p>
+</li>
+<li><p>Écrire une fonction en Python appelée <code class="docutils literal notranslate"><span class="pre">dico_dechiffrement(dico)</span></code> qui prend en paramètre dico un dictionnaire de chiffrement et qui renvoie un dictionnaire permettant le déchiffrement. On pourra s’inspirer du code incomplet ci-dessous ou proposer une autre solution :</p></li>
 </ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dico_dechiffrement</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">nouveau</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">dico</span> <span class="p">:</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">dico</span><span class="p">[]</span>
+            <span class="n">nouveau</span><span class="p">[]</span> <span class="o">=</span>
+    <span class="k">return</span> <span class="n">nouveau</span>
+</pre></div>
+</div>
 <ol class="loweralpha simple" start="3">
-<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">dechiffre(mot,</span> <span class="pre">dico)</span></code> qui reçoit un mot chiffré et un dictionnaire de chiffrement et renvoie le mot décodé. On utilisera les fonctions écrites dans les questions précédentes.</p></li>
+<li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">dechiffre(mot,</span> <span class="pre">dico)</span></code> qui reçoit un mot chiffré et un dictionnaire de chiffrement et renvoie le mot décodé. On utilisera les fonctions écrites dans les questions précédentes.</p></li>
 </ol>
 </li>
 <li><p>On souhaite à présent créer un dictionnaire de chiffrement. Écrire une fonction <code class="docutils literal notranslate"><span class="pre">dico_chiffrement(alphabet)</span></code> qui prend en paramètre alphabet un tableau de lettres et qui renvoie un dictionnaire de chiffrement dont les clés sont les lettres du tableau alphabet et les valeurs sont les lettres du tableau alphabet mélangées.</p>
@@ -608,12 +627,12 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tp_dictionnaire.html"
+       href="exercice.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">TP sur les dictionnaires</p>
+        <p class="prev-next-title">Exercice sur les dictionnaires</p>
       </div>
     </a>
     <a class="right-next"
