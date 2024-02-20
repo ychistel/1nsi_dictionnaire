@@ -358,22 +358,20 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 </pre></div>
 </div>
 </li>
-<li><ol class="loweralpha">
-<li><p>A partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?</p></li>
+<li><ol class="loweralpha simple">
+<li><p>À partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?</p></li>
 <li><p>Le numéro du mois actuel est stocké dans une variable numero_mois, écrire le code permettant d’obtenir le nom du mois qu’il sera x mois plus tard à partir du dictionnaire mois. Par exemple :</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">4</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, on doit obtenir « septembre »</p></li>
 <li><p>si <code class="docutils literal notranslate"><span class="pre">numero_mois</span> <span class="pre">=</span> <span class="pre">10</span></code> et <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3</span></code>, on doit obtenir « janvier »</p></li>
 </ul>
-</div></blockquote>
 </li>
 </ol>
 </li>
 <li><p>On définit une date comme un tuple : <code class="docutils literal notranslate"><span class="pre">(nom_jour,numero_jour,</span> <span class="pre">numero_mois,annee)</span></code>.</p>
 <ol class="loweralpha">
 <li><p>Sachant que <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">=</span> <span class="pre">(&quot;samedi&quot;,</span> <span class="pre">21,</span> <span class="pre">10,</span> <span class="pre">1995)</span></code>, que renvoie <code class="docutils literal notranslate"><span class="pre">mois[date[2]][1]</span></code> ?</p></li>
-<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">jour_suivant(date)</span></code> qui prend en paramètre une date sous forme de tuple et qui renvoie un tuple désignant la date du lendemain. Par exemple :</p>
+<li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">jour_suivant(date)</span></code> qui prend en paramètre une date sous forme de tuple et qui renvoie un tuple désignant la date du lendemain. Par exemple :</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jour_suivant</span><span class="p">(</span> <span class="p">(</span><span class="s2">&quot;samedi&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span> <span class="p">)</span> <span class="n">renvoie</span> <span class="p">(</span><span class="s2">&quot;dimanche&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">jour_suivant</span><span class="p">(</span> <span class="p">(</span><span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span> <span class="p">)</span> <span class="n">renvoie</span> <span class="p">(</span><span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
 </pre></div>
@@ -440,9 +438,8 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 </div>
 </li>
 <li><ol class="loweralpha">
-<li><p>On donne la fonction Parcourir suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.</p>
-<blockquote>
-<div><p>Exemple : Si la variable <code class="docutils literal notranslate"><span class="pre">Documents</span></code> contient le dictionnaire de l’exemple de la question 1 alors <code class="docutils literal notranslate"><span class="pre">Parcourir(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;Philo&quot;])</span></code> renvoie le dictionnaire <code class="docutils literal notranslate"><span class="pre">{&quot;Tractatus</span> <span class="pre">logicophilosophicus.epub&quot;:</span> <span class="pre">2600}</span></code>.</p>
+<li><p>On donne la fonction <code class="docutils literal notranslate"><span class="pre">Parcourir</span></code> suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.</p>
+<p>Par exemple, si la variable <code class="docutils literal notranslate"><span class="pre">Documents</span></code> contient le dictionnaire de l’exemple de la question 1 alors <code class="docutils literal notranslate"><span class="pre">Parcourir(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;Philo&quot;])</span></code> renvoie le dictionnaire <code class="docutils literal notranslate"><span class="pre">{&quot;Tractatus</span> <span class="pre">logicophilosophicus.epub&quot;:</span> <span class="pre">2600}</span></code>.</p>
 <p>Recopier et compléter la ligne 4:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">):</span>
     <span class="n">dossier</span> <span class="o">=</span> <span class="n">racine</span>
@@ -451,17 +448,14 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
     <span class="k">return</span> <span class="n">dossier</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p>Soit la fonction suivante :</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Afficher</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Afficher</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">):</span>
     <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Qu’affiche l’instruction <code class="docutils literal notranslate"><span class="pre">Afficher(Documents,</span> <span class="pre">[&quot;Cours&quot;,</span> <span class="pre">&quot;NSI&quot;],&quot;TP.html&quot;)</span></code> sachant que la variable Documents contient le dictionnaire de la question 1 ?</p>
-</div></blockquote>
 </li>
 </ol>
 </li>
@@ -469,14 +463,12 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <ol class="arabic" start="3">
 <li><ol class="loweralpha">
 <li><p>La fonction <code class="docutils literal notranslate"><span class="pre">Ajouter(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_fichier,</span> <span class="pre">taille)</span></code> suivante ajoute au dictionnaire <code class="docutils literal notranslate"><span class="pre">racine</span></code>, à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>, la clé nom_fichier associé à la valeur taille.</p>
-<blockquote>
-<div><p>Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.</p>
+<p>Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ajouter_fichier</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">,</span> <span class="n">nom_fichier</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
     <span class="n">dossier</span> <span class="o">=</span> <span class="n">Parcourir</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="n">adr</span><span class="p">)</span>
     <span class="n">taille</span> <span class="o">=</span> <span class="n">dossier</span><span class="p">[</span><span class="n">nom_fichier</span><span class="p">]</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">Ajouter_dossier(racine,</span> <span class="pre">adr,</span> <span class="pre">nom_dossier)</span></code> pour créer un dictionnaire représentant un dossier vide appelé <code class="docutils literal notranslate"><span class="pre">nom_dossier</span></code> dans le dictionnaire racine à l’adresse <code class="docutils literal notranslate"><span class="pre">adr</span></code>.</p></li>
 </ol>
@@ -506,8 +498,7 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <p>Codages des structures de données utilisées :</p>
 <ul>
 <li><p>Liste des liaisons d’un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type « tableau de tableaux ».</p>
-<blockquote>
-<div><div class="admonition warning">
+<div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Seules les liaisons directes existent, par exemple [« Toulouse », »Muret »] ou [« Muret », »Toulouse »]. Par contre, le tableau [« Toulouse », »Mazamet »] n’existe pas, puisque la ligne Toulouse-Mazamet passe par Castres.</p>
 </div>
@@ -520,7 +511,6 @@ Par exemple <code class="docutils literal notranslate"><span class="pre">jours.i
 <span class="p">]</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p>Dictionnaire associé à un joueur : On code la liste des villes et des trajets possédée par un joueur en utilisant un dictionnaire de tableaux. Chaque clef de ce dictionnaire est une ville de départ, et chaque valeur est un tableau contenant les villes d’arrivée possibles en fonction des liaisons possédées par le joueur.</p>
 <p>Le dictionnaire de tableaux du joueur 1 est donné ci-après :</p>

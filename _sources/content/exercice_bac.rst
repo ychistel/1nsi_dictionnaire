@@ -24,8 +24,8 @@ On dispose de la liste jours suivante et du dictionnaire mois suivant :
         9 :("septembre",30) , 10 :("octobre",31) , 11 :("novembre",30) , 12 :("décembre",31)}
 
 #.  
-    a. A partir de la liste jours, comment obtenir l’élément "lundi" ?
-    b. On rappelle que l’opérateur % (« modulo ») renvoie le reste de la division entière (division euclidienne).
+    a.  A partir de la liste jours, comment obtenir l’élément "lundi" ?
+    b.  On rappelle que l’opérateur % (« modulo ») renvoie le reste de la division entière (division euclidienne).
     
     .. admonition:: Exemple 
     
@@ -46,16 +46,16 @@ On dispose de la liste jours suivante et du dictionnaire mois suivant :
         numero_jour =(jours.index[ '…'] + '…' )% '…'
 
 #.
-    a. A partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?
-    b. Le numéro du mois actuel est stocké dans une variable numero_mois, écrire le code permettant d’obtenir le nom du mois qu’il sera x mois plus tard à partir du dictionnaire mois. Par exemple : 
+    a.  À partir du dictionnaire mois, comment obtenir le nombre de jours du mois de mars ?
+    b.  Le numéro du mois actuel est stocké dans une variable numero_mois, écrire le code permettant d’obtenir le nom du mois qu’il sera x mois plus tard à partir du dictionnaire mois. Par exemple : 
 
         -  si ``numero_mois = 4`` et ``x = 5``, on doit obtenir "septembre" 
         -  si ``numero_mois = 10`` et ``x = 3``, on doit obtenir "janvier"
 
 #.  On définit une date comme un tuple : ``(nom_jour,numero_jour, numero_mois,annee)``.
 
-    a. Sachant que ``date = ("samedi", 21, 10, 1995)``, que renvoie ``mois[date[2]][1]`` ?
-    b. Ecrire une fonction ``jour_suivant(date)`` qui prend en paramètre une date sous forme de tuple et qui renvoie un tuple désignant la date du lendemain. Par exemple :
+    a.  Sachant que ``date = ("samedi", 21, 10, 1995)``, que renvoie ``mois[date[2]][1]`` ?
+    b.  Écrire une fonction ``jour_suivant(date)`` qui prend en paramètre une date sous forme de tuple et qui renvoie un tuple désignant la date du lendemain. Par exemple :
 
         >>> jour_suivant( ("samedi", 21, 10, 1995) ) renvoie ("dimanche", 22, 10, 1995)
         >>> jour_suivant( ("mardi", 31, 10, 1995) ) renvoie ("mercredi", 1, 11, 1995)
@@ -126,9 +126,9 @@ Exemple : L'adresse du dossier : ``/home/pierre/Documents/`` est modélisée par
         }
 
 #.
-    a. On donne la fonction Parcourir suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.
-
-        Exemple : Si la variable ``Documents`` contient le dictionnaire de l'exemple de la question 1 alors ``Parcourir(Documents, ["Cours", "Philo"])`` renvoie le dictionnaire ``{"Tractatus logicophilosophicus.epub": 2600}``.
+    a.  On donne la fonction ``Parcourir`` suivante qui prend en paramètres un dossier racine et une liste représentant une adresse, et qui renvoie le contenu du dossier cible correspondant à l’adresse.
+    
+        Par exemple, si la variable ``Documents`` contient le dictionnaire de l'exemple de la question 1 alors ``Parcourir(Documents, ["Cours", "Philo"])`` renvoie le dictionnaire ``{"Tractatus logicophilosophicus.epub": 2600}``.
 
         Recopier et compléter la ligne 4:
 
@@ -140,7 +140,7 @@ Exemple : L'adresse du dossier : ``/home/pierre/Documents/`` est modélisée par
                     dossier = # A compléter
                 return dossier
 
-    b. Soit la fonction suivante :
+    b.  Soit la fonction suivante :
 
         .. code-block:: python
 
@@ -151,7 +151,7 @@ Exemple : L'adresse du dossier : ``/home/pierre/Documents/`` est modélisée par
         Qu’affiche l’instruction ``Afficher(Documents, ["Cours", "NSI"],"TP.html")`` sachant que la variable Documents contient le dictionnaire de la question 1 ?
 
 3.
-    a. La fonction ``Ajouter(racine, adr, nom_fichier, taille)`` suivante ajoute au dictionnaire ``racine``, à l'adresse ``adr``, la clé nom_fichier associé à la valeur taille.
+    a.  La fonction ``Ajouter(racine, adr, nom_fichier, taille)`` suivante ajoute au dictionnaire ``racine``, à l'adresse ``adr``, la clé nom_fichier associé à la valeur taille.
 
         Une ligne de la fonction donnée ci-dessous contient une erreur. Laquelle ? Proposer une correction.
 
@@ -161,7 +161,7 @@ Exemple : L'adresse du dossier : ``/home/pierre/Documents/`` est modélisée par
                 dossier = Parcourir(racine, adr)
                 taille = dossier[nom_fichier]
 
-    b. Ecrire une fonction ``Ajouter_dossier(racine, adr, nom_dossier)`` pour créer un dictionnaire représentant un dossier vide appelé ``nom_dossier`` dans le dictionnaire racine à l'adresse ``adr``.
+    b.  Ecrire une fonction ``Ajouter_dossier(racine, adr, nom_dossier)`` pour créer un dictionnaire représentant un dossier vide appelé ``nom_dossier`` dans le dictionnaire racine à l'adresse ``adr``.
 
 4.  Ecrire une fonction ``taille(dossier)`` qui prend en paramètre un dictionnaire ``dossier`` modélisant le contenu du répertoire dossier et qui renvoie le total de l’espace mémoire occupé par les fichiers contenus dans le dossier. On considère que le répertoire dossier ne contient que des fichiers et aucun sous-dossier.
 
@@ -190,7 +190,7 @@ Sur la seconde figure, les liaisons possédées par le joueur 1 sont en noir, et
 
 Codages des structures de données utilisées :
 
--  Liste des liaisons d'un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type "tableau de tableaux".
+-   Liste des liaisons d'un joueur : Toutes les liaisons directes (sans ville intermédiaire) construites par un joueur seront enregistrées dans une variable de type "tableau de tableaux".
 
     .. warning::
 
@@ -268,10 +268,10 @@ Un tel dictionnaire sera appelé **dictionnaire de chiffrement**.
 
     ``alpha ={"A":"B", "B":"D", "C":"A", "D":"C", "E":"F", "F":"G", "G":"E"}``.
 
-    a. Quelle est la valeur associée à la clé ``"D"`` ? En Python, comment l’obtenir ?
-    b. Chiffrer la chaîne de caractères ``"BAGAGE"`` avec le dictionnaire ``alpha``.
+    a.  Quelle est la valeur associée à la clé ``"D"`` ? En Python, comment l’obtenir ?
+    b.  Chiffrer la chaîne de caractères ``"BAGAGE"`` avec le dictionnaire ``alpha``.
 
-#. On considère qu’un mot est une chaîne de caractères (un objet de type str) écrite uniquement avec les 26 lettres de l’alphabet en majuscule. Par exemple, ``"ARBRE"`` est un mot et ``"L’ARBRE !"`` n’est pas un mot à cause des caractères : "’", " "(espace) et "!".  Écrire une fonction ``chiffrer(mot, alpha)`` qui prend en paramètres ``mot`` un mot et ``alpha`` un dictionnaire de chiffrement, et qui renvoie une chaîne de caractères chiffrée avec le dictionnaire de chiffrement ``alpha``.
+#.  On considère qu’un mot est une chaîne de caractères (un objet de type str) écrite uniquement avec les 26 lettres de l’alphabet en majuscule. Par exemple, ``"ARBRE"`` est un mot et ``"L’ARBRE !"`` n’est pas un mot à cause des caractères : "’", " "(espace) et "!".  Écrire une fonction ``chiffrer(mot, alpha)`` qui prend en paramètres ``mot`` un mot et ``alpha`` un dictionnaire de chiffrement, et qui renvoie une chaîne de caractères chiffrée avec le dictionnaire de chiffrement ``alpha``.
 
 #.  On souhaite déchiffrer un mot chiffré avec cette méthode.
 
